@@ -2,11 +2,12 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <footer className="bg-black text-white py-6 w-full width: 100%">
+        <footer className="bg-[#111111] text-white py-6 w-full width: 100%">
             <div className="container mx-auto px-4 flex justify-between w-full max-w-full">
                 <div className="space-y-2">
                     <p className="text-sm">
-                        Retriever é uma plataforma de informação e ajuda para pessoas com ansiedade, um lugar onde você possa se sentir seguro
+                        Retriever é uma plataforma de informação e ajuda para pessoas com ansiedade,<br/>
+                        um lugar onde você possa se sentir seguro
                     </p>
                     <p className="text-sm">© 2024 Retriever</p>
                 </div>
