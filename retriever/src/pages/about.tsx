@@ -1,33 +1,34 @@
 import Head from 'next/head';
 import Footer from '../components/Footer';
 import Nav from '../components/Nav';
+import '../app/globals.css';
 
 export default function About() {
     return (
-        <>
+        <main className="bg-white flex min-h-screen flex-col items-center justify-between p-0">
             <Head>
-                <title>Sobre - Retriever</title>
-                <meta name="description" content="Saiba mais sobre a Retriever, uma plataforma de informação e ajuda para pessoas com ansiedade." />
-                <link rel="icon" href="/favicon.ico" />
+                <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet" />
             </Head>
-            <Nav />
-            <main className="flex flex-col items-center justify-center flex-1 px-20 text-center">
-                <h1 className="text-6xl font-bold mt-6">
-                    Sobre a Retriever
-                </h1>
-                <p className="mt-3 text-2xl">
-                    A Retriever é uma plataforma dedicada a fornecer informações e suporte para pessoas que enfrentam ansiedade.
-                </p>
-                <div className="mt-6 text-lg leading-8">
-                    <p>
-                        Nossa missão é criar um ambiente seguro e acolhedor onde todos possam encontrar os recursos e o apoio que precisam.
-                    </p>
-                    <p className="mt-4">
-                        Fundada em 2024, a Retriever se compromete a oferecer conteúdo de alta qualidade, incluindo artigos, vídeos e muito mais.
+
+            <div className="relative w-full h-[70vh] bg-cover bg-center"
+                 style={{ backgroundImage: "url('/ImagesRetriever/backgrounddog.png')" }}>
+                <Nav />
+                <div className="flex flex-col items-center justify-center h-full">
+                    <h1 className="text-3xl font-bold mt-24 text-white">Nos tentamos fazer a ansiedade um assunto a ser falado</h1>
+                </div>
+            </div>
+
+            <div className="flex-grow flex flex-col items-center mt-16">
+                <h1 className="text-3xl font-bold text-purple-900 mb-8">About us</h1>
+                <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-1xl px-2">
+                    <img className="w-full md:w-1/2 h-auto md:h-1/2 " src="/ImagesRetriever/About.jpg" alt="About Us"/>
+                    <p className="md:ml-8 mt-8 md:mt-0 text-lg text-black">
+                        Retriever é um portal dedicado a trazer informações e apoio a pessoas que sofrem de ansiedade. Nosso objetivo é fornecer notícias, divulgar os diferentes tipos de ansiedade e compartilhar relatos de experiências pessoais. Além disso, incentivamos práticas de autocuidado e desenvolvimento pessoal para gerenciar a ansiedade de maneira saudável. Lembre-se, é sempre importante buscar ajuda de um profissional qualificado para um suporte adequado.
                     </p>
                 </div>
-            </main>
+            </div>
+
             <Footer />
-        </>
+        </main>
     );
 }
