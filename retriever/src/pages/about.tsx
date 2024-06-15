@@ -21,7 +21,7 @@ export default function About() {
             <div className="flex-grow flex flex-col items-center mt-16">
                 <h1 className="text-3xl font-bold text-purple-900 mb-8">About us</h1>
                 <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-1xl px-2">
-                    <img className="w-full md:w-1/2 h-auto md:h-1/2 " src="/ImagesRetriever/About.jpg" alt="About Us"/>
+                    <img className="w-full md:w-1/2 h-auto  " src="/ImagesRetriever/About.jpg" alt="About Us"/>
                     <p className="md:ml-8 mt-8 md:mt-0 text-lg text-black">
                         Retriever é um portal dedicado a trazer informações e apoio a pessoas que sofrem de ansiedade. Nosso objetivo é fornecer notícias, divulgar os diferentes tipos de ansiedade e compartilhar relatos de experiências pessoais. Além disso, incentivamos práticas de autocuidado e desenvolvimento pessoal para gerenciar a ansiedade de maneira saudável. Lembre-se, é sempre importante buscar ajuda de um profissional qualificado para um suporte adequado.
                     </p>
