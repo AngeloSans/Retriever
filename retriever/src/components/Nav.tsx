@@ -8,7 +8,7 @@ const Nav = () => {
                 <li className="ml-5"><a href="#" className="text-white text-sm font-semibold capitalize hover:text-purple-900">HOME</a></li>
                 <li className="ml-5"><a href="#" className="text-white text-sm font-semibold capitalize hover:text-purple-900">EXPLORAR</a></li>
                 <li className="ml-5"><a href="#" className="text-white text-sm font-semibold capitalize hover:text-purple-900">Tipos</a></li>
-                <li className="ml-5"><a href="#" className="text-white text-sm font-semibold capitalize hover:text-purple-900">Relatos</a></li>
+                <li className="ml-5"><Link href="/references" className="text-white text-sm font-semibold capitalize hover:text-purple-900">Relatos</Link></li>
                 <li className="ml-5"><Link href="/about" className="text-white text-sm font-semibold capitalize hover:text-purple-900">About</Link></li>
             </ul>
         </nav>
