@@ -39,11 +39,6 @@ export default function Home() {
                 </h1>
             </section>
 
-            <section className="w-full p-6">
-                <h1 className="text-black text-lg font-semibold">
-                    Relatos Inspiradores
-                </h1>
-            </section>
 
             <section className="w-full p-6 relative">
                 <h1 className="text-black text-lg font-semibold">
