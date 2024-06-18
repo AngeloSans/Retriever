@@ -40,17 +40,6 @@ export default function Home() {
             </section>
 
 
-            <section className="w-full p-6 relative">
-                <h1 className="text-black text-lg font-semibold">
-                    Relatos Inspiradores
-                </h1>
-                <div className="absolute bottom-4 left-4">
-                    <button className="bg-purple-950 text-white px-6 py-3 rounded-full">
-                        Compartilhar
-                    </button>
-                </div>
-            </section>
-
             <section className="w-full p-6">
                 <h1 className="text-black text-lg font-semibold mb-4">
                     Saiba Mais sobre Ansiedade!
