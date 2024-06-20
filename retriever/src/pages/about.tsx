@@ -10,7 +10,7 @@ export default function About() {
                 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet" />
             </Head>
 
-            <div className="relative w-full h-[70vh] bg-cover bg-center" style={{ backgroundImage: "url('/ImagesRetriever/backgrounddog.png')" }}>
+            <div className="relative w-full h-screen bg-cover bg-center" style={{ backgroundImage: "url('/ImagesRetriever/backgrounddog.png')" }}>
                 <Nav />
                 <div className="flex flex-col items-center justify-center h-full">
                     <h1 className="text-3xl font-bold mt-24 text-white">Nós tentamos fazer da ansiedade um assunto a ser falado</h1>

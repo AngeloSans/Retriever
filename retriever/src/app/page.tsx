@@ -10,8 +10,8 @@ export default function Home() {
             </Head>
             <header className="w-full">
                 <div
-                    className="relative w-full h-96 bg-cover bg-center"
-                    style={{ backgroundImage: "url('/ImagesRetriever/womanSad.png')" }}
+                    className="relative w-full h-screen bg-cover bg-center"
+                    style={{ backgroundImage: "url('/ImagesRetriever/womanSad.png')", minHeight: "320px" }}
                 >
                     <Nav />
                     <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white px-6">
