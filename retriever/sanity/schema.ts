@@ -1,27 +1,33 @@
-import {defineField, type SchemaTypeDefinition} from 'sanity'
+import { defineType, defineField, type SchemaTypeDefinition } from 'sanity';
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
-      defineField({
-        name: 'Title',
-        title: 'title',
-        type: 'string',
-      }),
-    defineField({
-      name: 'Content',
-      title: 'Content',
-      type: 'string',
+    defineType({
+      name: 'Post',
+      type: 'document',
+      title: 'Post',
+      fields: [
+        defineField({
+          name: 'title',
+          title: 'Title',
+          type: 'string',
+        }),
+        defineField({
+          name: 'content',
+          title: 'Content',
+          type: 'string',
+        }),
+        defineField({
+          name: 'likes',
+          title: 'Likes',
+          type: 'number',
+        }),
+        defineField({
+          name: 'date',
+          title: 'Date',
+          type: 'date',
+        }),
+      ],
     }),
-    defineField({
-      name: 'Likes',
-      title: 'likes',
-      type: 'int',
-    }),
-    defineField({
-      name: 'Date',
-      title: 'Date',
-      type: 'date',
-    }),
-
   ],
-}
+};
