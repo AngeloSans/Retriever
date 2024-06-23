@@ -36,17 +36,17 @@ export const schema: { types: SchemaTypeDefinition[] } = {
       fields: [
         defineField({
           name: 'user',
-          title: 'Title',
+          title: 'User',
           type: 'string',
         }),
         defineField({
           name: 'instagram',
-          title: 'Content',
+          title: 'Instagram',
           type: 'string',
         }),
         defineField({
           name: 'Mensage',
-          title: 'mensage',
+          title: 'Message',
           type: 'string',
         }),
         defineField({
@@ -59,7 +59,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     defineType({
       name: 'RetrieverAcademic',
       type: 'document',
-      title: 'Relato',
+      title: 'RetrieverAcademic',
       fields: [
         defineField({
           name: 'title',
@@ -68,12 +68,12 @@ export const schema: { types: SchemaTypeDefinition[] } = {
         }),
         defineField({
           name: 'autor',
-          title: 'autor',
+          title: 'Author',
           type: 'string',
         }),
         defineField({
           name: 'previous',
-          title: 'previous',
+          title: 'Previous',
           type: 'string',
         }),
       ],

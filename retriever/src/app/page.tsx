@@ -1,6 +1,8 @@
 import Head from 'next/head';
 import Footer from '../components/Footer';
 import Nav from '../components/Nav';
+import PostForm from '../components/PostForm';
+import RelatosSection from '../components/RelatosSection';
 
 export default function Home() {
     return (
@@ -39,7 +41,6 @@ export default function Home() {
                 </h1>
             </section>
 
-
             <section className="w-full p-6">
                 <h1 className="text-black text-lg font-semibold mb-4">
                     Saiba Mais sobre Ansiedade!
@@ -55,6 +56,15 @@ export default function Home() {
                         allowFullScreen
                     ></iframe>
                 </div>
+            </section>
+
+            <RelatosSection />
+
+            <section className="w-full p-6">
+                <h1 className="text-black text-lg font-semibold mb-4">
+                    Crie uma Nova Postagem
+                </h1>
+                <PostForm />
             </section>
 
             <Footer/>
