@@ -1,10 +1,31 @@
+// pages/index.tsx
+
 import Head from 'next/head';
 import Footer from '../components/Footer';
 import Nav from '../components/Nav';
-//import PostForm from '../components/PostForm';
-//import RelatosSection from '../components/RelatosSection';
+import { getAllRelatos, urlFor } from './retriever/';
+import { InferGetStaticPropsType } from 'next';
 
-export default function Home() {
+type Relato = {
+    _id: string;
+    user: string;
+    instagram: string;
+    message: string;
+    date: string;
+    photo: any;
+};
+
+export const getStaticProps = async () => {
+    const relatos: Relato[] = await getAllRelatos();
+    return {
+        props: {
+            relatos,
+        },
+        revalidate: 60,
+    };
+};
+
+const Home = ({ relatos }: InferGetStaticPropsType<typeof getStaticProps>) => {
     return (
         <main className="bg-white flex flex-col min-h-screen items-center justify-between p-0">
             <Head>
@@ -58,10 +79,32 @@ export default function Home() {
                 </div>
             </section>
 
+            <section className="w-full p-6">
+                <h1 className="text-black text-lg font-semibold mb-4">
+                    Relatos de Ansiedade
+                </h1>
+                <div>
+                    {relatos.map((relato) => (
+                        <div key={relato._id} className="mb-4">
+                            {relato.photo && (
+                                <img
+                                    src={urlFor(relato.photo).width(100).url()}
+                                    alt={relato.user}
+                                    className="w-16 h-16 rounded-full"
+                                />
+                            )}
+                            <h2 className="text-xl font-semibold">{relato.user}</h2>
+                            <p>{relato.instagram}</p>
+                            <p>{relato.message}</p>
+                            <p>{new Date(relato.date).toLocaleDateString()}</p>
+                        </div>
+                    ))}
+                </div>
+            </section>
 
-
-
-            <Footer/>
+            <Footer />
         </main>
     );
-}
+};
+
+export default Home;

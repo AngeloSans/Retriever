@@ -30,9 +30,9 @@ export const schema: { types: SchemaTypeDefinition[] } = {
       ],
     }),
     defineType({
-      name: 'Relato',
+      name: 'relatos',
       type: 'document',
-      title: 'Relato',
+      title: 'relatos',
       fields: [
         defineField({
           name: 'user',
@@ -53,6 +53,14 @@ export const schema: { types: SchemaTypeDefinition[] } = {
           name: 'date',
           title: 'Date',
           type: 'date',
+        }),
+        defineField({
+          name: 'photo',
+          title: 'Photo',
+          type: 'image',
+          options: {
+            hotspot: true,
+          },
         }),
       ],
     }),
