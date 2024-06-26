@@ -1,19 +1,18 @@
-// pages/index.tsx
-
 import Head from 'next/head';
 import Footer from '../components/Footer';
 import Nav from '../components/Nav';
-import { getAllRelatos, urlFor } from './retriever/';
-import { InferGetStaticPropsType } from 'next';
+import type { InferGetStaticPropsType, GetStaticProps } from 'next'
+import { getAllRelatos } from '../../sanity/lib/sanity';
 
 type Relato = {
     _id: string;
     user: string;
     instagram: string;
-    message: string;
+    Mensage: string;
     date: string;
-    photo: any;
+    photo: string;
 };
+
 
 export const getStaticProps = async () => {
     const relatos: Relato[] = await getAllRelatos();
@@ -88,14 +87,14 @@ const Home = ({ relatos }: InferGetStaticPropsType<typeof getStaticProps>) => {
                         <div key={relato._id} className="mb-4">
                             {relato.photo && (
                                 <img
-                                    src={urlFor(relato.photo).width(100).url()}
+                                    src={relato.photo}
                                     alt={relato.user}
                                     className="w-16 h-16 rounded-full"
                                 />
                             )}
                             <h2 className="text-xl font-semibold">{relato.user}</h2>
                             <p>{relato.instagram}</p>
-                            <p>{relato.message}</p>
+                            <p>{relato.Mensage}</p>
                             <p>{new Date(relato.date).toLocaleDateString()}</p>
                         </div>
                     ))}
