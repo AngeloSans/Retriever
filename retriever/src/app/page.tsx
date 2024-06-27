@@ -1,30 +1,8 @@
 import Head from 'next/head';
 import Footer from '../components/Footer';
 import Nav from '../components/Nav';
-import type { InferGetStaticPropsType, GetStaticProps } from 'next'
-import { getAllRelatos } from '../../sanity/lib/sanity';
 
-type Relato = {
-    _id: string;
-    user: string;
-    instagram: string;
-    Mensage: string;
-    date: string;
-    photo: string;
-};
-
-
-export const getStaticProps = async () => {
-    const relatos: Relato[] = await getAllRelatos();
-    return {
-        props: {
-            relatos,
-        },
-        revalidate: 60,
-    };
-};
-
-const Home = ({ relatos }: InferGetStaticPropsType<typeof getStaticProps>) => {
+export default function Home() {
     return (
         <main className="bg-white flex flex-col min-h-screen items-center justify-between p-0">
             <Head>
@@ -61,6 +39,7 @@ const Home = ({ relatos }: InferGetStaticPropsType<typeof getStaticProps>) => {
                 </h1>
             </section>
 
+
             <section className="w-full p-6">
                 <h1 className="text-black text-lg font-semibold mb-4">
                     Saiba Mais sobre Ansiedade!
@@ -78,32 +57,7 @@ const Home = ({ relatos }: InferGetStaticPropsType<typeof getStaticProps>) => {
                 </div>
             </section>
 
-            <section className="w-full p-6">
-                <h1 className="text-black text-lg font-semibold mb-4">
-                    Relatos de Ansiedade
-                </h1>
-                <div>
-                    {relatos.map((relato) => (
-                        <div key={relato._id} className="mb-4">
-                            {relato.photo && (
-                                <img
-                                    src={relato.photo}
-                                    alt={relato.user}
-                                    className="w-16 h-16 rounded-full"
-                                />
-                            )}
-                            <h2 className="text-xl font-semibold">{relato.user}</h2>
-                            <p>{relato.instagram}</p>
-                            <p>{relato.Mensage}</p>
-                            <p>{new Date(relato.date).toLocaleDateString()}</p>
-                        </div>
-                    ))}
-                </div>
-            </section>
-
-            <Footer />
+            <Footer/>
         </main>
     );
-};
-
-export default Home;
+}
