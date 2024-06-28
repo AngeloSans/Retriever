@@ -27,6 +27,16 @@ export const schema: { types: SchemaTypeDefinition[] } = {
           title: 'Date',
           type: 'date',
         }),
+          defineField({
+            name: 'Person',
+            title: 'owner',
+            type: 'string',
+          }),
+        defineField({
+          name: 'ContentType',
+          title: 'type',
+          type: 'string',
+        }),
       ],
     }),
     defineType({
