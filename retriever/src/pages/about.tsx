@@ -29,7 +29,8 @@ const About = ({ relatos }: InferGetStaticPropsType<typeof getStaticProps>) => {
     return (
         <main className="bg-white flex min-h-screen flex-col items-center justify-between p-0 font-sans">
             <Head>
-                <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet" />
+                <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet"/>
+                <title>About</title>
             </Head>
 
             <div className="relative w-full h-screen bg-cover bg-center" style={{ backgroundImage: "url('/ImagesRetriever/backgrounddog.png')" }}>
