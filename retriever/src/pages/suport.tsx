@@ -3,11 +3,12 @@ import Head from 'next/head';
 import Footer from '../components/Footer';
 import Nav from '../components/Nav';
 import '../app/globals.css';
+import Link from "next/link";
 
 export default function Suport() {
     const [openItem, setOpenItem] = useState(null);
 
-    const toggleItem = (index) => {
+    const toggleItem = ({index}: { index: any }) => {
         if (openItem === index) {
             setOpenItem(null);
         } else {
@@ -18,7 +19,7 @@ export default function Suport() {
     return (
         <main className="bg-white flex min-h-screen flex-col items-center justify-between p-0">
             <Head>
-                <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet" />
+                <Link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet" />
                 <title>Suporte</title>
             </Head>
             <Nav />
@@ -54,7 +55,7 @@ export default function Suport() {
                             <li key={index} className="bg-white p-4 rounded-lg shadow-sm">
                                 <div
                                     className="flex justify-between items-center cursor-pointer"
-                                    onClick={() => toggleItem(index)}
+                                    onClick={() => toggleItem({index: index})}
                                 >
                                     <span className="text-lg font-semibold text-black">{item}</span>
                                     <span className="text-black">{openItem === index ? '-' : '+'}</span>

@@ -4,6 +4,7 @@ import { useState } from "react";
 import Head from "next/head";
 import Footer from "../components/Footer";
 import Nav from "../components/Nav";
+import Link from "next/link";
 
 const tiposAnsiedade = [
     {
@@ -32,7 +33,7 @@ export default function Home() {
     const [imagemAtual, setImagemAtual] = useState(tiposAnsiedade[0].img);
     const [itemSelecionado, setItemSelecionado] = useState(0);
 
-    const handleItemClick = (index, img) => {
+    const handleItemClick = ({index, img}: { index: any, img: any }) => {
         setImagemAtual(img);
         setItemSelecionado(index);
     };
@@ -40,7 +41,7 @@ export default function Home() {
     return (
         <main className="bg-white flex flex-col min-h-screen items-center justify-between p-0">
             <Head>
-                <link
+                <Link
                     href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap"
                     rel="stylesheet"
                 />
@@ -142,7 +143,7 @@ export default function Home() {
                     <img
                         src={imagemAtual}
                         alt="Tipos de Ansiedade"
-                        className="w-full md:w-1/2 h-auto object-cover"
+                        className="w-full md:w-1/2 h-96 object-cover"
                     />
                     <div className="flex flex-col mt-4 md:mt-0 md:ml-4">
                         {tiposAnsiedade.map((tipo, index) => (
@@ -153,7 +154,7 @@ export default function Home() {
                                         ? "border-black bg-gray-200"
                                         : "border-gray-300"
                                 }`}
-                                onClick={() => handleItemClick(index, tipo.img)}
+                                onClick={() => handleItemClick({index: index, img: tipo.img})}
                             >
                                 <h2 className="text-black text-lg font-semibold">{tipo.tipo}</h2>
                             </div>

@@ -24,7 +24,7 @@ const Footer = () => {
                     <div className="space-y-4">
                         <h6 className="font-bold">Referências</h6>
                         <ul className="space-y-2">
-                            <li><Link href="/articles" className="text-sm hover:underline">Artigos</Link></li>
+                            <li><Link href="/retrieveracademic" className="text-sm hover:underline">Artigos</Link></li>
                             <li><Link href="/references" className="text-sm hover:underline">Referências</Link></li>
                         </ul>
                     </div>
