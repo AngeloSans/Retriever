@@ -76,9 +76,9 @@ export default function Home() {
             <section className="w-full p-6">
                 <div className="flex items-center space-x-4 mb-4">
                     <h1 className="text-black text-lg font-semibold">Explorar</h1>
-                    <a href="#" className="text-purple-900">
+                    <Link href="/explorer" className="text-purple-900">
                         Ver mais
-                    </a>
+                    </Link>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <div className="bg-white rounded-lg shadow-md overflow-hidden">
