@@ -10,7 +10,7 @@ type Relato = {
     _id: string;
     user: string;
     instagram: string;
-    Mensage: string;
+    message: string;
     date: string;
     photo: string;
 };
@@ -62,7 +62,7 @@ const About = ({ relatos }: InferGetStaticPropsType<typeof getStaticProps>) => {
                                         <p className="text-sm text-gray-600">{new Date(relato.date).toLocaleDateString()}</p>
                                     </div>
                                 </div>
-                                <p className="mt-4 text-lg text-black">{relato.Mensage}</p>
+                                <p className="mt-4 text-lg text-black">{relato.message}</p>
                             </div>
                         ))}
                     </div>
