@@ -27,11 +27,15 @@ const Explorer: React.FC<ExplorerProps> = ({ posts }) => {
             <Head>
                 <Link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet" />
             </Head>
-            <Nav />
+            <header className="bg-[#743F9E] text-white w-full py-6">
+                <div className="container mx-auto px-4">
+                    <Nav/>
+                </div>
+            </header>
             <div className="container mx-auto p-4">
                 <h1 className="text-2xl font-bold mb-6">Explore Topics</h1>
                 <div className="space-y-6">
-                    {posts.map((post, index) => (
+                {posts.map((post, index) => (
                         <TopicCard
                             key={index}
                             title={post.title}

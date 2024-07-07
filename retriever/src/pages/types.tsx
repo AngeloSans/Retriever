@@ -18,18 +18,22 @@ const Types = () => {
             </Head>
 
             <header className="bg-purple-600 p-4 text-white">
-                <h1 className="text-2xl">Ansiedade</h1>
-                <Nav />
+                <div className="container mx-auto">
+                    <h1 className="text-3xl font-bold">Ansiedade</h1>
+                    <Nav />
+                </div>
             </header>
 
-            <main className="p-4">
+            <main className="container mx-auto p-4">
                 <section className="mb-8">
-                    <h2 className="text-xl font-semibold mb-4">Tipos de Ansiedade</h2>
-                    <div className="flex flex-wrap gap-2">
+                    <h2 className="text-2xl font-semibold mb-4 text-center text-purple-600">Tipos de Ansiedade</h2>
+                    <div className="flex flex-wrap justify-center gap-4">
                         {['Social', 'Pânico', 'TOC', 'TDAH', 'Pânico', 'Pânico', 'Pânico'].map((type, index) => (
                             <button
                                 key={index}
-                                className={`p-2 rounded ${selectedType === type ? 'bg-purple-600 text-white' : 'bg-gray-300'}`}
+                                className={`p-4 rounded-full transition duration-300 ease-in-out ${
+                                    selectedType === type ? 'bg-purple-600 text-white' : 'bg-gray-300 text-gray-700 hover:bg-purple-300'
+                                }`}
                                 onClick={() => handleTypeClick(type)}
                             >
                                 {type}
@@ -40,21 +44,24 @@ const Types = () => {
 
                 <section>
                     {selectedType === 'Social' && (
-                        <article className="mb-4">
-                            <img src="/path/to/image1.jpg" alt="Transtorno de Ansiedade Social" className="w-full mb-2" />
-                            <h3 className="font-semibold">Transtorno de Ansiedade Social: o que é, sintomas e tratamento</h3>
+                        <article className="mb-8">
+                            <img src="/path/to/image1.jpg" alt="Transtorno de Ansiedade Social" className="w-full mb-4 rounded-lg shadow-md" />
+                            <h3 className="text-xl font-semibold">Transtorno de Ansiedade Social: o que é, sintomas e tratamento</h3>
+                            <p className="mt-2 text-gray-700">Descrição detalhada sobre o transtorno de ansiedade social.</p>
                         </article>
                     )}
                     {selectedType === 'Pânico' && (
-                        <article className="mb-4">
-                            <img src="/path/to/image2.jpg" alt="Ansiedade em Crianças" className="w-full mb-2" />
-                            <h3 className="font-semibold">Entenda o que é ansiedade social e como se manifesta nas crianças</h3>
+                        <article className="mb-8">
+                            <img src="/path/to/image2.jpg" alt="Ansiedade em Crianças" className="w-full mb-4 rounded-lg shadow-md" />
+                            <h3 className="text-xl font-semibold">Entenda o que é ansiedade social e como se manifesta nas crianças</h3>
+                            <p className="mt-2 text-gray-700">Descrição detalhada sobre a ansiedade em crianças.</p>
                         </article>
                     )}
                     {selectedType === 'TOC' && (
-                        <article className="mb-4">
-                            <img src="/path/to/image3.jpg" alt="Ansiedade e Fobia Social" className="w-full mb-2" />
-                            <h3 className="font-semibold">Fobia social quando o sofrimento pela timidez é tanto que a saída é se esconder</h3>
+                        <article className="mb-8">
+                            <img src="/path/to/image3.jpg" alt="Ansiedade e Fobia Social" className="w-full mb-4 rounded-lg shadow-md" />
+                            <h3 className="text-xl font-semibold">Fobia social quando o sofrimento pela timidez é tanto que a saída é se esconder</h3>
+                            <p className="mt-2 text-gray-700">Descrição detalhada sobre ansiedade e fobia social.</p>
                         </article>
                     )}
 
