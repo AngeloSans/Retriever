@@ -9,7 +9,7 @@ const Nav = () => {
     };
 
     return (
-        <nav className="bg-purple-600">
+        <nav className="bg-purple-600 py-5">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16">
                     <div className="flex items-center">
@@ -27,7 +27,7 @@ const Nav = () => {
                         </div>
                     </div>
                     <div className="-mr-2 flex md:hidden">
-                        <button onClick={toggleNavbar} className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-purple-600 focus:outline-none focus:bg-gray-700 focus:text-white">
+                        <button onClick={toggleNavbar} className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-purple-600 focus:outline-none focus:bg-purple-950 focus:text-white">
                             <svg className="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                                 {isOpen ? (
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />

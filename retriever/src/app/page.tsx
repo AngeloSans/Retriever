@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState } from "react";
 import Head from "next/head";
 import Footer from "../components/Footer";
 import Nav from "../components/Nav";
@@ -45,7 +45,12 @@ export default function Home() {
                     href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap"
                     rel="stylesheet"
                 />
+
             </Head>
+            <div className="relative w-full h-screenbg-cover bg-center">
+                <Nav/>
+
+            </div>
             <header className="w-full">
                 <div
                     className="relative w-full h-screen bg-cover bg-center"
@@ -54,9 +59,10 @@ export default function Home() {
                         minHeight: "320px",
                     }}
                 >
-                    <Nav />
-                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white px-6">
-                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+
+                    <div
+                        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white px-6">
+                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 ">
                             O que é Ansiedade?
                         </h1>
                         <p className="text-sm sm:text-base md:text-lg">
@@ -72,6 +78,7 @@ export default function Home() {
                     </div>
                 </div>
             </header>
+
 
             <section className="w-full p-6">
                 <div className="flex items-center space-x-4 mb-4">
@@ -180,7 +187,7 @@ export default function Home() {
                 </div>
             </section>
 
-            <Footer />
+            <Footer/>
         </main>
     );
 }
