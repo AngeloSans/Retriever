@@ -28,13 +28,17 @@ export const getStaticProps: GetStaticProps<{ relatos: Relato[] }> = async () =>
 
 const Reports = ({ relatos }: InferGetStaticPropsType<typeof getStaticProps>) => {
     return (
-        <main className="bg-gray-100 flex min-h-screen flex-col items-center justify-between p-4 font-sans">
+        <main className="bg-white flex min-h-screen flex-col items-center justify-between p-0 font-sans">
             <Head>
                 <Link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet"/>
                 <title>Relatos</title>
             </Head>
 
-            <Nav />
+
+            <div className="relative w-full h-screen bg-cover bg-center">
+                <Nav/>
+
+            </div>
 
             <div className="mt-16 w-full max-w-3xl px-4">
                 <h2 className="text-3xl font-bold text-purple-900 mb-8">Relatos de Experiências Pessoais</h2>
