@@ -1,10 +1,10 @@
 import Head from 'next/head';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import '../app/globals.css';
 
-export default function RetrieverAcademic() {  // Capitalized component name
+export default function RetrieverAcademic() {
     const [query, setQuery] = useState('');
     const [results, setResults] = useState([]);
 
@@ -18,12 +18,15 @@ export default function RetrieverAcademic() {  // Capitalized component name
     };
 
     return (
-        <div className="bg-white flex min-h-screen flex-col items-center justify-between p-0">
-            <Head>
-                <title>Retriever Acadêmico</title>
-            </Head>
-            <Nav />
-            <main className="main">
+        <>
+            
+            <main className="bg-white flex flex-col min-h-screen items-center justify-between p-0">
+                <Head>
+                    <title>Retriever Acadêmico</title>
+                </Head>
+                <div className="relative w-full bg-cover bg-center">
+                    <Nav/>
+                </div>
                 <h1>Retriever Acadêmico</h1>
                 <p>Pesquise o seu material academico sobre ansiedade</p>
                 <div className="search-container">
@@ -45,6 +48,6 @@ export default function RetrieverAcademic() {  // Capitalized component name
                 </div>
             </main>
             <Footer />
-        </div>
+        </>
     );
 }
