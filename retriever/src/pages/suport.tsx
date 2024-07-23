@@ -22,7 +22,9 @@ export default function Suport() {
                 <Link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet" />
                 <title>Suporte</title>
             </Head>
-            <Nav />
+            <div className="relative w-full bg-cover bg-center">
+                <Nav/>
+            </div>
 
             <section className="w-full bg-purple-700 text-white py-12">
                 <div className="container mx-auto text-center">
