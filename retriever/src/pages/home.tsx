@@ -62,7 +62,7 @@ const Home: React.FC = () => {
     return (
         <main className="bg-white flex flex-col min-h-screen items-center justify-between p-0">
             <Head>
-                <Link
+                <link
                     href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap"
                     rel="stylesheet"
                 />
@@ -267,7 +267,6 @@ const Home: React.FC = () => {
                     </div>
                 </div>
             </section>
-
             <section className="w-full p-6" data-aos={isFirstLoad ? "fade-up" : ""}>
                 <div className="flex items-center space-x-4 mb-4">
                     <h1 className="text-black text-lg font-semibold">Explorar</h1>
@@ -284,6 +283,7 @@ const Home: React.FC = () => {
                             className="w-full h-48 object-cover"
                         />
                         <div className="p-4">
+                            
                             <h2 className="text-black text-md font-semibold">
                                 Ansiedade na pré-história
                             </h2>
@@ -294,78 +294,14 @@ const Home: React.FC = () => {
                             </p>
                         </div>
                     </div>
-                    <Link href="/suport" className="bg-white rounded-lg shadow-md overflow-hidden"
-                         data-aos={isFirstLoad ? "fade-up" : ""} data-aos-delay="200">
-                        <img
-                            src="/ImagesRetriever/anxietyciency.jpg"
-                            alt="Como a ciência explica a ansiedade e o estresse"
-                            className="w-full h-48 object-cover"
-                        />
-                        <div className="p-4">
-                            <h2 className="text-black text-md font-semibold">
-                                Como a ciência explica a ansiedade e o estresse
-                            </h2>
-                            <p className="text-gray-600 text-sm">
-                                A ansiedade e o estresse podem ser causados por uma série de
-                                fatores, entre eles a vida agitada, pressões sociais, medo,
-                                estilo de vida, etc.
-                            </p>
-                        </div>
-                    </Link>
-                    <Link href="/suport"  className="bg-white rounded-lg shadow-md overflow-hidden"
-                         data-aos={isFirstLoad ? "fade-up" : ""} data-aos-delay="400">
-                        <img
-                            src="/ImagesRetriever/anxiouwoman.jpg"
-                            alt="Transtornos de ansiedade em mulheres"
-                            className="w-full h-48 object-cover"
-                        />
-                        <div className="p-4">
-                            <h2 className="text-black text-md font-semibold">
-                                Transtornos de ansiedade em mulheres
-                            </h2>
-                            <p className="text-gray-600 text-sm">
-                                Mulheres apresentam um risco significativamente maior comparado
-                                com os homens para o desenvolvimento de transtornos de
-                                ansiedade ao longo da vida.
-                            </p>
-                        </div>
-                    </Link>
-                </Link>
-            </section>
-            <section className="w-full p-6" data-aos={isFirstLoad ? "fade-up" : ""}>
-                <div className="flex items-center space-x-4 mb-4">
-                    <h1 className="text-black text-lg font-semibold">Explorar</h1>
-                    <Link href="/explorer" className="text-purple-900">
-                        Ver mais
-                    </Link>
-                </div>
-                <Link href="/suport" className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <div className="bg-white rounded-lg shadow-md overflow-hidden"
-                         data-aos={isFirstLoad ? "fade-up" : ""}>
-                        <img
-                            src="/ImagesRetriever/homemdascavernas.jpg"
-                            alt="Ansiedade na pré-história"
-                            className="w-full h-48 object-cover"
-                        />
-                        <div className="p-4">
-                            <h2 className="text-black text-md font-semibold">
-                                Ansiedade na pré-história
-                            </h2>
-                            <p className="text-gray-600 text-sm">
-                                Foi a sensação de insegurança que criou o homem moderno. Entenda
-                                aqui as origens, a importância e os efeitos da ansiedade para
-                                nós.
-                            </p>
-                        </div>
-                    </div>
-                    <Link href="/suport" className="bg-white rounded-lg shadow-md overflow-hidden"
                          data-aos={isFirstLoad ? "fade-up" : ""} data-aos-delay="200">
                         <img
                             src="/ImagesRetriever/anxietyciency.jpg"
                             alt="Como a ciência explica a ansiedade e o estresse"
                             className="w-full h-48 object-cover"
                         />
-                        <div className="p-4">
+                        <Link href="/suport" className="p-4">
                             <h2 className="text-black text-md font-semibold">
                                 Como a ciência explica a ansiedade e o estresse
                             </h2>
@@ -374,16 +310,16 @@ const Home: React.FC = () => {
                                 fatores, entre eles a vida agitada, pressões sociais, medo,
                                 estilo de vida, etc.
                             </p>
-                        </div>
-                    </Link>
-                    <Link href="/suport" className="bg-white rounded-lg shadow-md overflow-hidden"
+                        </Link>
+                    </div>
+                    <div className="bg-white rounded-lg shadow-md overflow-hidden"
                          data-aos={isFirstLoad ? "fade-up" : ""} data-aos-delay="400">
                         <img
                             src="/ImagesRetriever/anxiouwoman.jpg"
                             alt="Transtornos de ansiedade em mulheres"
                             className="w-full h-48 object-cover"
                         />
-                        <div className="p-4">
+                        <Link href="/suport" className="p-4">
                             <h2 className="text-black text-md font-semibold">
                                 Transtornos de ansiedade em mulheres
                             </h2>
@@ -392,11 +328,10 @@ const Home: React.FC = () => {
                                 com os homens para o desenvolvimento de transtornos de
                                 ansiedade ao longo da vida.
                             </p>
-                        </div>
-                    </Link>
+                        </Link>
+                    </div>
                 </Link>
             </section>
-
             <section className="w-full p-6" data-aos={isFirstLoad ? "fade-up" : ""}>
                 <h1 className="text-black text-lg font-semibold mb-4">
                     Saiba Mais sobre Ansiedade!
@@ -413,7 +348,6 @@ const Home: React.FC = () => {
                     ></iframe>
                 </div>
             </section>
-
             <Footer/>
         </main>
     );
