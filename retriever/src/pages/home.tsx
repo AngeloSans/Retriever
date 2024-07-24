@@ -3,8 +3,8 @@ import Head from "next/head";
 import Footer from "../components/Footer";
 import Nav from "../components/Nav";
 import Link from "next/link";
+import 'aos/dist/aos.css';
 import AOS from "aos";
-import "aos/dist/aos.css";
 
 const tiposAnsiedade = [
     {
@@ -274,26 +274,30 @@ const Home: React.FC = () => {
                         Ver mais
                     </Link>
                 </div>
-                <Link href="/suport" className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div className="bg-white rounded-lg shadow-md overflow-hidden"
-                         data-aos={isFirstLoad ? "fade-up" : ""}>
-                        <img
-                            src="/ImagesRetriever/homemdascavernas.jpg"
-                            alt="Ansiedade na pré-história"
-                            className="w-full h-48 object-cover"
-                        />
-                        <div className="p-4">
-                            
-                            <h2 className="text-black text-md font-semibold">
-                                Ansiedade na pré-história
-                            </h2>
-                            <p className="text-gray-600 text-sm">
-                                Foi a sensação de insegurança que criou o homem moderno. Entenda
-                                aqui as origens, a importância e os efeitos da ansiedade para
-                                nós.
-                            </p>
+                <div  className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <Link href="/suport">
+                        <div className="bg-white rounded-lg shadow-md overflow-hidden"
+                             data-aos={isFirstLoad ? "fade-up" : ""}>
+                            <img
+                                src="/ImagesRetriever/homemdascavernas.jpg"
+                                alt="Ansiedade na pré-história"
+                                className="w-full h-48 object-cover"
+                            />
+                            <div className="p-4">
+
+                                <h2 className="text-black text-md font-semibold">
+                                    Ansiedade na pré-história
+                                </h2>
+                                <p className="text-gray-600 text-sm">
+                                    Foi a sensação de insegurança que criou o homem moderno. Entenda
+                                    aqui as origens, a importância e os efeitos da ansiedade para
+                                    nós.
+                                </p>
+                            </div>
                         </div>
-                    </div>
+                    </Link>
+                    
+
                     <div className="bg-white rounded-lg shadow-md overflow-hidden"
                          data-aos={isFirstLoad ? "fade-up" : ""} data-aos-delay="200">
                         <img
@@ -330,7 +334,7 @@ const Home: React.FC = () => {
                             </p>
                         </Link>
                     </div>
-                </Link>
+                </div>
             </section>
             <section className="w-full p-6" data-aos={isFirstLoad ? "fade-up" : ""}>
                 <h1 className="text-black text-lg font-semibold mb-4">
