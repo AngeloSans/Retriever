@@ -13,7 +13,7 @@ const About = () => {
         <main className="bg-white flex min-h-screen flex-col items-center justify-between p-0 font-sans">
             <Head>
                 <Link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet"/>
-                <title>About</title>
+                <title>Sobre Retriever</title>
             </Head>
 
             <div className="relative w-full h-screen bg-cover bg-center" style={{ backgroundImage: "url('/ImagesRetriever/backgrounddog.png')" }}>

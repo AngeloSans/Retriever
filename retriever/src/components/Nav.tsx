@@ -20,7 +20,7 @@ const Nav = () => {
                     <div className="hidden md:block">
                         <div className="ml-10 flex items-baseline space-x-4">
                             <Link href="/" className="text-white text-sm font-semibold capitalize hover:text-purple-900">Home</Link>
-                            <Link href="#" className="text-white text-sm font-semibold capitalize hover:text-purple-900">Explorar</Link>
+                            <Link href="/explorer" className="text-white text-sm font-semibold capitalize hover:text-purple-900">Explorar</Link>
                             <Link href="/types" className="text-white text-sm font-semibold capitalize hover:text-purple-900">Tipos</Link>
                             <Link href="/reports" className="text-white text-sm font-semibold capitalize hover:text-purple-900">Relatos</Link>
                             <Link href="/about" className="text-white text-sm font-semibold capitalize hover:text-purple-900">About</Link>
@@ -43,7 +43,7 @@ const Nav = () => {
                 <div className="md:hidden">
                     <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                         <Link href="/" className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-white hover:bg-gray-700">HOME</Link>
-                        <Link href="#" className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-white hover:bg-gray-700">EXPLORAR</Link>
+                        <Link href="/explorer" className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-white hover:bg-gray-700">EXPLORAR</Link>
                         <Link href="/types" className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-white hover:bg-gray-700">Tipos</Link>
                         <Link href="/reports" className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-white hover:bg-gray-700">Relatos</Link>
                         <Link href="/about" className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-white hover:bg-gray-700">About</Link>
