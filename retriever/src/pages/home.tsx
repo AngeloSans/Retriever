@@ -71,7 +71,7 @@ const Home: React.FC = () => {
                 <Nav/>
             </div>
             <header className="w-full">
-                <a href="/suport">
+                <Link href="/suport">
                     <div
                         className="relative w-full h-screen bg-cover bg-center"
                         style={{
@@ -100,7 +100,7 @@ const Home: React.FC = () => {
                             </p>
                         </div>
                     </div>
-                </a>
+                </Link>
             </header>
 
             <section className="w-full p-6" data-aos={isFirstLoad ? "fade-up" : ""}>

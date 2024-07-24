@@ -9,7 +9,7 @@ const Nav = () => {
     };
 
     return (
-        <nav className="bg-purple-600 py-5">
+        <nav className="bg-purple-600 top-0 left-0 w-full z-10 fixed py-5 shadow-2xl">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16">
                     <div className="flex items-center">
