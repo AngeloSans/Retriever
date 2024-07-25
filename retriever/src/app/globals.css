@@ -26,7 +26,11 @@ body {
   rgb(var(--background-start-rgb));
   font-family: "Montserrat Thin";
 }
-
+.black-stripe{
+  width: 100%;
+  height: 0.5px;
+  background-color: #B7B7B7;
+}
 @layer utilities {
   .text-balance {
     overflow-wrap: break-word;
