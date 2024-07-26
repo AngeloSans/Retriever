@@ -19,30 +19,35 @@ export default function RetrieverAcademic() {
 
     return (
         <>
-            
             <main className="bg-white flex flex-col min-h-screen items-center justify-between p-0">
                 <Head>
                     <title>Retriever Acadêmico</title>
                 </Head>
                 <div className="relative w-full bg-cover bg-center">
-                    <Nav/>
+                    <Nav />
                 </div>
-                <h1>Retriever Acadêmico</h1>
+                <h1 className="text-4xl mt-20 font-bold">Retriever Acadêmico</h1>
                 <p>Pesquise o seu material academico sobre ansiedade</p>
-                <div className="search-container">
+                <div className="search-container flex mt-4 w-full max-w-3xl mx-auto">
                     <input
                         type="text"
                         value={query}
                         onChange={(e) => setQuery(e.target.value)}
                         placeholder="Digite aqui"
+                        className="flex-grow p-2 text-black rounded-l-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
                     />
-                    <button onClick={handleSearch}>Search</button>
+                    <button
+                        onClick={handleSearch}
+                        className="flex-shrink-0 px-6 py-2 bg-purple-600 text-white rounded-r-full hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2"
+                    >
+                        Search
+                    </button>
                 </div>
-                <div className="results">
+                <div className="results mt-4 w-full max-w-3xl mx-auto">
                     {results.map((result, index) => (
-                        <div key={index} className="result">
-                            <h2>{result.title}</h2>
-                            <p>{result.authors}</p>
+                        <div key={index} className="result p-2 border-b border-gray-200">
+                            <h2 className="text-xl font-semibold">{result.title}</h2>
+                            <p className="text-gray-600">{result.authors}</p>
                         </div>
                     ))}
                 </div>
