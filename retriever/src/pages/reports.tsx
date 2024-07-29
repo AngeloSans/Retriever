@@ -34,15 +34,13 @@ const Reports = ({ relatos }: InferGetStaticPropsType<typeof getStaticProps>) =>
                 <title>Relatos</title>
             </Head>
 
-
-            <div className="relative w-full h-screen bg-cover bg-center">
+            <div className="relative w-full bg-cover bg-center">
                 <Nav/>
-
             </div>
 
-            <div className="mt-16 w-full max-w-3xl px-4">
+            <div className="mt-16 text-center w-full px-4 mt-40">
                 <h2 className="text-3xl font-bold text-purple-900 mb-8">Relatos de Experiências Pessoais</h2>
-                <div className="grid gap-8">
+                <div className="grid gap-8 max-w-[600px] mx-auto">
                     {relatos.map((relato) => (
                         <div key={relato._id} className="bg-white border border-gray-200 p-6 rounded-lg shadow-lg">
                             <div className="flex items-center space-x-4">
