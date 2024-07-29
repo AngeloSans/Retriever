@@ -33,12 +33,12 @@ export const schema: { types: SchemaTypeDefinition[] } = {
           type: 'datetime',
         }),
         defineField({
-          name: 'person',
+          name: 'owner',
           title: 'Owner',
           type: 'string',
         }),
         defineField({
-          name: 'contentType',
+          name: 'type',
           title: 'Type',
           type: 'string',
         }),

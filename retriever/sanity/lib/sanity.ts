@@ -27,13 +27,14 @@ export async function getAllRelatos() {
 
 export async function getAllPosts() {
     const query = `*[_type == "post"] {
+        _id,
         title,
         summary,
         content,
         likes,
         date,
-        person,
-        contentType,
+        owner,
+        type,
         "image": image.asset->url
     }`;
     try {
@@ -44,4 +45,34 @@ export async function getAllPosts() {
         console.error("Error fetching posts:", error.message);
         throw error;
     }
+}
+
+export async function getPostById(id: string) {
+    const query = `*[_type == "post" && _id == $id][0] {
+        _id,
+        title,
+        summary,
+        content,
+        likes,
+        date,
+        owner,
+        type,
+        "image": image.asset->url
+    }`;
+    const params = { id };
+    try {
+        const post = await client.fetch(query, params);
+        console.log("Post fetched:", post);
+        return post;
+    } catch (error) {
+        console.error("Error fetching post by ID:", error.message);
+        throw error;
+    }
+}
+
+export async function getAllPostIds() {
+    const posts = await getAllPosts();
+    return posts.map(post => ({
+        params: { id: post._id }
+    }));
 }
