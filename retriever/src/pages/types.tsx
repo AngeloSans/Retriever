@@ -48,28 +48,28 @@ const Types = () => {
 
                 <section>
                     {selectedType === 'Social' && (
-                        <article className="mb-8">
-                            <img src="/ImagesRetriever/ansiedadesocialtypes.jpg" alt="Transtorno de Ansiedade Social" className="max-w-md h-64 mx-auto mb-4 rounded-lg shadow-md object-cover" />
+                        <article className="mb-8 bg-white shadow-lg rounded-lg overflow-hidden max-w-sm mx-auto">
+                            <img src="/ImagesRetriever/ansiedadesocialtypes.jpg" alt="Transtorno de Ansiedade Social" className="max-w-md h-64 mx-auto mb-4  shadow-md object-cover" />
                             <h3 className="text-xl font-semibold text-black">Transtorno de Ansiedade Social: o que é, sintomas e tratamento</h3>
                             <p className="mt-2 text-black">Descrição detalhada sobre o transtorno de ansiedade social.</p>
                         </article>
                     )}
                     {selectedType === 'Pânico' && (
-                        <article className="mb-8">
+                        <article className="mb-8 bg-white shadow-lg rounded-lg overflow-hidden max-w-sm mx-auto">
                             <img src="/ImagesRetriever/panicotypes.jpg" alt="Ansiedade em Crianças" className="max-w-md h-64 mx-auto mb-4 rounded-lg shadow-md object-cover" />
                             <h3 className="text-xl font-semibold text-black">Entenda o que é ansiedade social e como se manifesta nas crianças</h3>
                             <p className="mt-2 text-black">Descrição detalhada sobre a ansiedade em crianças.</p>
                         </article>
                     )}
                     {selectedType === 'TOC' && (
-                        <article className="mb-8">
+                        <article className="mb-8 bg-white shadow-lg rounded-lg overflow-hidden max-w-sm mx-auto">
                             <img src="/ImagesRetriever/toctypes.jpg" alt="Ansiedade e Fobia Social" className="max-w-md h-64 mx-auto mb-4 rounded-lg shadow-md object-cover" />
                             <h3 className="text-xl text-black font-semibold">Fobia social quando o sofrimento pela timidez é tanto que a saída é se esconder</h3>
                             <p className="mt-2 text-gray-700">Descrição detalhada sobre ansiedade e fobia social.</p>
                         </article>
                     )}
                     {selectedType === 'TDAH' && (
-                        <article className="mb-8">
+                        <article className="mb-8 bg-white shadow-lg rounded-lg overflow-hidden max-w-sm mx-auto">
                             <img src="/ImagesRetriever/tdahtypes.jpeg" alt="Ansiedade e Fobia Social" className="max-w-md h-64 mx-auto mb-4 rounded-lg shadow-md object-cover" />
                             <h3 className="text-xl text-black font-semibold">Fobia social quando o sofrimento pela timidez é tanto que a saída é se esconder</h3>
                             <p className="mt-2 text-gray-700">Descrição detalhada sobre ansiedade e fobia social.</p>
