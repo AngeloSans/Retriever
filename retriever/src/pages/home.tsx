@@ -71,7 +71,7 @@ const Home: React.FC = () => {
                 <Nav/>
             </div>
             <header className="w-full">
-                <Link href="/suport">
+                <Link href="/anxietyabout">
                     <div
                         className="relative w-full h-screen bg-cover bg-center"
                         style={{
