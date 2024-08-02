@@ -26,7 +26,7 @@ export default function Suport() {
                 <Nav/>
             </div>
 
-            <section className="w-full bg-purple-700 text-white py-12">
+            <section className="w-full bg-purple-700 mt-20 text-white py-12">
                 <div className="container mx-auto text-center">
                     <h1 className="text-5xl font-bold mb-6">Suporte</h1>
                 </div>
@@ -48,11 +48,11 @@ export default function Suport() {
                     <h2 className="text-3xl font-bold mb-6">Dúvidas frequentes</h2>
                     <ul className="space-y-4">
                         {[
-                            "Artigos mais lidos",
-                            "Gerenciar sua Conta do Google",
-                            "Recuperação de conta",
-                            "Segurança da conta",
-                            "Privacidade da conta"
+                            "Ansiedade",
+                            "ANsiedade",
+                            "Ansiedade",
+                            "Ansiedade",
+                            "Ansiedade"
                         ].map((item, index) => (
                             <li key={index} className="bg-white p-4 rounded-lg shadow-sm">
                                 <div
