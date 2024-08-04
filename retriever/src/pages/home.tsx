@@ -211,7 +211,7 @@ const Home: React.FC = () => {
                     </Link>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div className="bg-white rounded-lg shadow-md overflow-hidden"
+                    <Link href="/suport">
                          data-aos={isFirstLoad ? "fade-up" : ""}>
                         <img
                             src="/ImagesRetriever/homemdascavernas.jpg"
@@ -228,8 +228,8 @@ const Home: React.FC = () => {
                                 nós.
                             </p>
                         </div>
-                    </div>
-                    <div className="bg-white rounded-lg shadow-md overflow-hidden"
+                    </Link>
+                    <Link href="/suport">
                          data-aos={isFirstLoad ? "fade-up" : ""} data-aos-delay="200">
                         <img
                             src="/ImagesRetriever/anxietyciency.jpg"
@@ -246,8 +246,8 @@ const Home: React.FC = () => {
                                 estilo de vida, etc.
                             </p>
                         </div>
-                    </div>
-                    <div className="bg-white rounded-lg shadow-md overflow-hidden"
+                    </Link>
+                    <Link href="/suport">
                          data-aos={isFirstLoad ? "fade-up" : ""} data-aos-delay="400">
                         <img
                             src="/ImagesRetriever/anxiouwoman.jpg"
@@ -264,7 +264,7 @@ const Home: React.FC = () => {
                                 ansiedade ao longo da vida.
                             </p>
                         </div>
-                    </div>
+                    </Link>
                 </div>
             </section>
             <section className="w-full p-6" data-aos={isFirstLoad ? "fade-up" : ""}>
@@ -275,8 +275,7 @@ const Home: React.FC = () => {
                     </Link>
                 </div>
                 <div  className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <Link href="/suport">
-                        <div className="bg-white rounded-lg shadow-md overflow-hidden"
+                        <Link href="/suport">
                              data-aos={isFirstLoad ? "fade-up" : ""}>
                             <img
                                 src="/ImagesRetriever/homemdascavernas.jpg"
@@ -294,11 +293,11 @@ const Home: React.FC = () => {
                                     nós.
                                 </p>
                             </div>
-                        </div>
-                    </Link>
+                        </Link>
+                    
                     
 
-                    <div className="bg-white rounded-lg shadow-md overflow-hidden"
+                    <Link href="/suport">
                          data-aos={isFirstLoad ? "fade-up" : ""} data-aos-delay="200">
                         <img
                             src="/ImagesRetriever/anxietyciency.jpg"
@@ -315,8 +314,8 @@ const Home: React.FC = () => {
                                 estilo de vida, etc.
                             </p>
                         </Link>
-                    </div>
-                    <div className="bg-white rounded-lg shadow-md overflow-hidden"
+                    </Link>
+                    <Link href="/suport">
                          data-aos={isFirstLoad ? "fade-up" : ""} data-aos-delay="400">
                         <img
                             src="/ImagesRetriever/anxiouwoman.jpg"
@@ -333,11 +332,11 @@ const Home: React.FC = () => {
                                 ansiedade ao longo da vida.
                             </p>
                         </Link>
-                    </div>
+                    </Link>
                 </div>
             </section>
             <section className="w-full p-6" data-aos={isFirstLoad ? "fade-up" : ""}>
-                <h1 className="text-black text-lg font-semibold mb-4">
+                <h1 className="text-black text-2xl text-center font-semibold mb-4">
                     Saiba Mais sobre Ansiedade!
                 </h1>
                 <div className="flex justify-center">
