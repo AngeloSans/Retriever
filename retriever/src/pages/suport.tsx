@@ -28,19 +28,26 @@ export default function Suport() {
 
             <section className="w-full bg-purple-700 mt-20 text-white py-12">
                 <div className="container mx-auto text-center">
-                    <h1 className="text-5xl font-bold mb-6">Suporte</h1>
+                    <h2 className="text-5xl font-bold mb-6">Como Podemos Te Ajudar ?</h2>
+                </div>
+                <div className="container mx-auto text-center">
+                    <div className="grid grid-cols-2 mt-8 gap-4">
+                        <button className="bg-white text-gray-800 font-bold py-4 rounded-full">Como posso me ajudar
+                        </button>
+                        <button className="bg-white text-gray-800 font-bold py-4 rounded-full">Posso me ajudar?
+                        </button>
+                        <button className="bg-white text-gray-800 font-bold py-4 rounded-full">O Retriever é
+                            confiável?
+                        </button>
+                        <button className="bg-white text-gray-800 font-bold py-4 rounded-full">O Retriever é
+                            confiável?
+                        </button>
+                    </div>
                 </div>
             </section>
 
             <section className="w-full py-12">
-                <div className="container mx-auto text-center">
-                    <div className="grid grid-cols-2 gap-4 mb-12">
-                        <button className="bg-gray-200 text-gray-800 font-bold py-4 rounded-lg">Como posso me ajudar</button>
-                        <button className="bg-gray-200 text-gray-800 font-bold py-4 rounded-lg">Posso me ajudar?</button>
-                        <button className="bg-gray-200 text-gray-800 font-bold py-4 rounded-lg">O Retriever é confiável?</button>
-                        <button className="bg-gray-200 text-gray-800 font-bold py-4 rounded-lg">O Retriever é confiável?</button>
-                    </div>
-                </div>
+
             </section>
 
             <section className="w-full bg-purple-700 text-white py-12">
