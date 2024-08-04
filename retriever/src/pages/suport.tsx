@@ -20,7 +20,7 @@ export default function Suport() {
         <main className="bg-white flex min-h-screen flex-col items-center justify-between p-0">
             <Head>
                 <Link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet" />
-                <title>Suporte</title>
+                <title>Suporte e Duvidas</title>
             </Head>
             <div className="relative w-full bg-cover bg-center">
                 <Nav/>
