@@ -40,11 +40,11 @@ const Reports = ({ relatos }: InferGetStaticPropsType<typeof getStaticProps>) =>
 
             <div className="mt-16 text-center w-full px-4 mt-40">
                 <h2 className="text-3xl font-bold text-purple-900 mb-8">Relatos de Experiências Pessoais</h2>
-                <div className="grid gap-8 max-w-2xl mx-auto mb-16"> 
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-2xl mx-auto mb-16"> 
                     {relatos.map((relato) => (
                         <div
                             key={relato._id}
-                            className="bg-white border border-gray-200 p-6 rounded-lg shadow-lg max-w-xs mx-auto"
+                            className="bg-white border border-gray-200 p-6 rounded-lg shadow-lg"
                         >
                             <div className="flex items-center space-x-4">
                                 <img
@@ -58,13 +58,13 @@ const Reports = ({ relatos }: InferGetStaticPropsType<typeof getStaticProps>) =>
                                     <p className="text-sm text-gray-600">{new Date(relato.date).toLocaleDateString()}</p>
                                 </div>
                             </div>
-                            <p className="mt-4 text-sm text-gray-700 max-w-xs break-words">{relato.message}</p>
+                            <p className="mt-4 text-sm text-gray-700 break-words">{relato.message}</p>
                         </div>
                     ))}
                 </div>
             </div>
 
-            <Footer /> 
+            <Footer/> 
         </main>
     );
 };
