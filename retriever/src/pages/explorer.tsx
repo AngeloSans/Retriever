@@ -35,8 +35,8 @@ const Explorer: React.FC<ExplorerProps> = ({ posts }) => {
             </div>
 
             <div className="container mx-auto p-4 mt-40">
-                <h1 className="text-2xl font-bold mb-6">Explore Topics</h1>
-                <div className="space-y-6">
+                <h1 className="text-2xl font-bold mb-6">Explorar</h1>
+                <div className="space-y-20">
                     {posts.map((post) => (
                         <TopicCard
                             key={post.id}

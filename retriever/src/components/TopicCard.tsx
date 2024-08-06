@@ -15,7 +15,7 @@ interface TopicCardProps {
 const TopicCard: React.FC<TopicCardProps> = ({ id, title, summary, date, likes, image, owner, type }) => {
     return (
         <Link href={`/contentpage/${id}`} passHref>
-            <div className="block border p-4 flex flex-col space-y-4 max-w-lg cursor-pointer">
+            <div className="block border p-4 flex flex-col space-y-4 max-w-lg cursor-pointer mb-6">
                 <img src={image} alt={title} className="w-full h-40 object-cover rounded-md" />
                 <div className="flex flex-col w-full">
                     <div>
