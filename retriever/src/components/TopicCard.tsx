@@ -32,6 +32,6 @@ const TopicCard: React.FC<TopicCardProps> = ({ id, title, summary, date, likes, 
             </div>
         </Link>
     );
-}
+};
 
 export default TopicCard;
