@@ -9,7 +9,7 @@ export default function RetrieverAcademic() {
     const [results, setResults] = useState([]);
 
     const handleSearch = async () => {
-        // Mock search results
+        
         setResults([
             { title: "What is an anxiety disorder?", authors: "MG Craske, SL Rauch" },
             { title: "What is an anxiety disorder?", authors: "MG Craske, SL Rauch" },
@@ -27,8 +27,8 @@ export default function RetrieverAcademic() {
                     <Nav />
                 </div>
                 <h1 className="text-4xl mt-20 font-bold">Retriever Acadêmico</h1>
-                <p>Pesquise o seu material academico sobre ansiedade</p>
-                <div className="search-container flex mt-4 w-full max-w-3xl mx-auto">
+                <p className="text-black">Pesquise o seu material academico sobre ansiedade</p>
+                <div className="search-container flex mt-1 w-full max-w-3xl mx-auto">
                     <input
                         type="text"
                         value={query}
