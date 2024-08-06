@@ -24,7 +24,7 @@ const ContentPage = ({ post }) => {
             <h1>{post.title}</h1>
             <p>{post.content}</p>
             <img src={post.imageUrl} alt={post.title} />
-            {/* Outros campos conforme necessário */}
+            
         </div>
     );
 };
