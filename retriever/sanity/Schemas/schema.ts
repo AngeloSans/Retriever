@@ -8,6 +8,11 @@ export const schema: { types: SchemaTypeDefinition[] } = {
       title: 'Post',
       fields: [
         defineField({
+          name: 'id',
+          title: 'ID',
+          type: 'string',
+        }),
+        defineField({
           name: 'title',
           title: 'Title',
           type: 'string',
@@ -58,6 +63,11 @@ export const schema: { types: SchemaTypeDefinition[] } = {
       title: 'Relatos',
       fields: [
         defineField({
+          name: 'id',
+          title: 'ID',
+          type: 'string',
+        }),
+        defineField({
           name: 'user',
           title: 'User',
           type: 'string',
@@ -92,6 +102,11 @@ export const schema: { types: SchemaTypeDefinition[] } = {
       type: 'document',
       title: 'RetrieverAcademic',
       fields: [
+        defineField({
+          name: 'id',
+          title: 'ID',
+          type: 'string',
+        }),
         defineField({
           name: 'title',
           title: 'Title',
