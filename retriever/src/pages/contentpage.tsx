@@ -1,79 +1,51 @@
-import { GetStaticPaths, GetStaticProps } from 'next';
-import { getAllPosts, getPostById } from '../../sanity/lib/sanity';
-import Head from 'next/head';
-import Footer from '../components/Footer';
-import Nav from '../components/Nav';
-import React from 'react';
+import { useRouter } from 'next/router';
+import { groq } from 'next-sanity';
+import { getClient } from '../../sanity/lib/sanity';
 
-interface Post {
-    id: string;
-    title: string;
-    summary: string;
-    content: string;
-    date: string;
-    likes: number;
-    image: string;
-    owner: string;
-    type: string;
-}
+const query = groq`*[_type == "post" && _id == $id][0]{
+  title,
+  summary,
+  content,
+  likes,
+  date,
+  owner,
+  type,
+  "imageUrl": image.asset->url
+}`;
 
-interface ContentPageProps {
-    post: Post;
-}
+const ContentPage = ({ post }) => {
+    const router = useRouter();
+    if (router.isFallback) {
+        return <div>Loading...</div>;
+    }
 
-const ContentPage: React.FC<ContentPageProps> = ({ post }) => {
     return (
-        <main className="bg-white flex min-h-screen flex-col items-center p-0">
-            <Head>
-                <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet" />
-                <title>{post.title}</title>
-            </Head>
-
-            <div className="relative w-full bg-cover bg-center">
-                <Nav />
-            </div>
-
-            <div className="container mx-auto p-4 mt-40">
-                <h1 className="text-3xl font-bold mb-6">{post.title}</h1>
-                <img src={post.image} alt={post.title} className="w-full h-60 object-cover rounded-md mb-6" />
-                <p className="text-sm text-gray-500 mb-4">{post.date}</p>
-                <p className="text-gray-700">{post.content}</p>
-                <p className="mt-4 text-gray-700">{post.likes.toLocaleString()} likes</p>
-                <p className="mt-2 text-gray-700">Owner: {post.owner}</p>
-                <p className="mt-2 text-gray-700">Type: {post.type}</p>
-            </div>
-
-            <Footer />
-        </main>
+        <div>
+            <h1>{post.title}</h1>
+            <p>{post.content}</p>
+            <img src={post.imageUrl} alt={post.title} />
+            {/* Outros campos conforme necessário */}
+        </div>
     );
 };
 
-export const getStaticPaths: GetStaticPaths = async () => {
-    const posts = await getAllPosts();
+export async function getStaticPaths() {
+    const posts = await getClient().fetch(groq`*[_type == "post"]{_id}`);
     const paths = posts.map((post) => ({
-        params: { id: post.id },
+        params: { id: post._id },
     }));
 
-    return {
-        paths,
-        fallback: 'blocking', // Or true, depending on your use case
-    };
-};
+    return { paths, fallback: true };
+}
 
-export const getStaticProps: GetStaticProps<ContentPageProps> = async ({ params }) => {
-    const { id } = params as { id: string };
-    const post = await getPostById(id);
-
-    if (!post) {
-        return { notFound: true };
-    }
+export async function getStaticProps({ params }) {
+    const post = await getClient().fetch(query, { id: params.id });
 
     return {
         props: {
             post,
         },
-        revalidate: 60,
     };
-};
+}
 
 export default ContentPage;
