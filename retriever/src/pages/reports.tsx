@@ -40,7 +40,7 @@ const Reports = ({ relatos }: InferGetStaticPropsType<typeof getStaticProps>) =>
 
             <div className="mt-16 text-center w-full px-4 mt-40">
                 <h2 className="text-3xl font-bold text-purple-900 mb-8">Relatos de Experiências Pessoais</h2>
-                <div className="grid gap-8 max-w-2xl mx-auto">
+                <div className="grid gap-8 max-w-2xl mx-auto mb-16"> 
                     {relatos.map((relato) => (
                         <div
                             key={relato._id}
@@ -64,7 +64,7 @@ const Reports = ({ relatos }: InferGetStaticPropsType<typeof getStaticProps>) =>
                 </div>
             </div>
 
-            <Footer />
+            <Footer /> 
         </main>
     );
 };
