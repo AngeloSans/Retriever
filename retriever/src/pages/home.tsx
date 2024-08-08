@@ -245,7 +245,8 @@ const Home: React.FC = () => {
                                     Ansiedade pode ser sintoma de baixa autoestima
                                 </h2>
                                 <p className="text-gray-600 text-sm">
-                                    Porém, pouco se relaciona a baixa autoestima com o aparecimento de transtornos ansiosos.
+                                    Porém, pouco se relaciona a baixa autoestima com o aparecimento de transtornos
+                                    ansiosos.
                                     Mas, será que realmente existe ligação?
                                 </p>
                             </div>
@@ -263,7 +264,8 @@ const Home: React.FC = () => {
                                     Boa autoestima pode combater os sintomas de ansiedade
                                 </h2>
                                 <p className="text-gray-600 text-sm">
-                                    Pessoas com baixa autoestima tendem a tentar corresponder às expectativas dos outros,
+                                    Pessoas com baixa autoestima tendem a tentar corresponder às expectativas dos
+                                    outros,
                                     se desgastam com medo da opinião alheia..
                                 </p>
                             </div>
@@ -313,7 +315,7 @@ const Home: React.FC = () => {
                                     Não é de hoje que os especialistas vêm estudando como a tecnologia
                                     pode desencadear a solidão e, em casos mais graves,
                                     até mesmo depressão..
-                                    
+
                                 </p>
                             </div>
                         </div>
@@ -336,6 +338,22 @@ const Home: React.FC = () => {
                             </div>
                         </div>
                     </Link>
+                </div>
+            </section>
+            <section className="w-full p-6" data-aos={isFirstLoad ? "fade-up" : ""}>
+                <h1 className="text-black text-2xl text-center font-semibold mb-4">
+                    Saiba Mais sobre Ansiedade!
+                </h1>
+                <div className="flex justify-center">
+                    <iframe
+                        width="660"
+                        height="415"
+                        src="https://www.youtube.com/embed/Tv0gJTBmVuc"
+                        title="Anxiety video"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                    ></iframe>
                 </div>
             </section>
 
