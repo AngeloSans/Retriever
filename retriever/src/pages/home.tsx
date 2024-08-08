@@ -111,60 +111,63 @@ const Home: React.FC = () => {
                     </Link>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div className="bg-white rounded-lg shadow-md overflow-hidden"
-                         data-aos={isFirstLoad ? "fade-up" : ""}>
-                        <img
-                            src="/ImagesRetriever/homemdascavernas.jpg"
-                            alt="Ansiedade na pré-história"
-                            className="w-full h-48 object-cover"
-                        />
-                        <div className="p-4">
-                            <h2 className="text-black text-md font-semibold">
-                                Ansiedade na pré-história
-                            </h2>
-                            <p className="text-gray-600 text-sm">
-                                Foi a sensação de insegurança que criou o homem moderno. Entenda
-                                aqui as origens, a importância e os efeitos da ansiedade para
-                                nós.
-                            </p>
+                    <Link href="/suport" data-aos={isFirstLoad ? "fade-up" : ""}>
+                        <div className="bg-white rounded-lg shadow-md overflow-hidden">
+                            <img
+                                src="/ImagesRetriever/homemdascavernas.jpg"
+                                alt="Ansiedade na pré-história"
+                                className="w-full h-48 object-cover"
+                            />
+                            <div className="p-4">
+                                <h2 className="text-black text-md font-semibold">
+                                    Ansiedade na pré-história
+                                </h2>
+                                <p className="text-gray-600 text-sm">
+                                    Foi a sensação de insegurança que criou o homem moderno.
+                                    Entenda aqui as origens, a importância e os efeitos da
+                                    ansiedade para nós.
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                    <div className="bg-white rounded-lg shadow-md overflow-hidden"
-                         data-aos={isFirstLoad ? "fade-up" : ""} data-aos-delay="200">
-                        <img
-                            src="/ImagesRetriever/anxietyciency.jpg"
-                            alt="Como a ciência explica a ansiedade e o estresse"
-                            className="w-full h-48 object-cover"
-                        />
-                        <div className="p-4">
-                            <h2 className="text-black text-md font-semibold">
-                                Como a ciência explica a ansiedade e o estresse
-                            </h2>
-                            <p className="text-gray-600 text-sm">
-                                A ansiedade e o estresse podem ser causados por uma série de
-                                fatores, entre eles a vida agitada, pressões sociais, medo,
-                                estilo de vida, etc.
-                            </p>
+                    </Link>
+                    <Link href="/suport" data-aos={isFirstLoad ? "fade-up" : ""} data-aos-delay="200">
+                        <div className="bg-white rounded-lg shadow-md overflow-hidden">
+                            <img
+                                src="/ImagesRetriever/anxietyciency.jpg"
+                                alt="Como a ciência explica a ansiedade e o estresse"
+                                className="w-full h-48 object-cover"
+                            />
+                            <div className="p-4">
+                                <h2 className="text-black text-md font-semibold">
+                                    Como a ciência explica a ansiedade e o estresse
+                                </h2>
+                                <p className="text-gray-600 text-sm">
+                                    A ansiedade e o estresse podem ser causados por uma série de
+                                    fatores, entre eles a vida agitada, pressões sociais, medo,
+                                    estilo de vida, etc.
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                    <div className="bg-white rounded-lg shadow-md overflow-hidden"
-                         data-aos={isFirstLoad ? "fade-up" : ""} data-aos-delay="400">
-                        <img
-                            src="/ImagesRetriever/anxiouwoman.jpg"
-                            alt="Transtornos de ansiedade em mulheres"
-                            className="w-full h-48 object-cover"
-                        />
-                        <div className="p-4">
-                            <h2 className="text-black text-md font-semibold">
-                                Transtornos de ansiedade em mulheres
-                            </h2>
-                            <p className="text-gray-600 text-sm">
-                                Mulheres apresentam um risco significativamente maior comparado
-                                com os homens para o desenvolvimento de transtornos de
-                                ansiedade ao longo da vida.
-                            </p>
+                    </Link>
+                    <Link href="/suport" data-aos={isFirstLoad ? "fade-up" : ""} data-aos-delay="400">
+                        <div className="bg-white rounded-lg shadow-md overflow-hidden">
+                            <img
+                                src="/ImagesRetriever/anxiouwoman.jpg"
+                                alt="Transtornos de ansiedade em mulheres"
+                                className="w-full h-48 object-cover"
+                            />
+                            <div className="p-4">
+                                <h2 className="text-black text-md font-semibold">
+                                    Transtornos de ansiedade em mulheres
+                                </h2>
+                                <p className="text-gray-600 text-sm">
+                                    Mulheres apresentam um risco significativamente maior
+                                    comparado com os homens para o desenvolvimento de
+                                    transtornos de ansiedade ao longo da vida.
+                                </p>
+                            </div>
                         </div>
-                    </div>
+                    </Link>
                 </div>
             </section>
 
