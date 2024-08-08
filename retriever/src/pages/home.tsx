@@ -81,12 +81,12 @@ const Home: React.FC = () => {
                     >
                         <div
                             className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white px-6">
-                            <h1
+                            <h2
                                 className={`text-3xl sm:text-4xl md:text-5xl font-bold mb-4 ${isFirstLoad ? "aos-init aos-animate" : ""}`}
                                 data-aos={isFirstLoad ? "fade-up" : ""}
                             >
                                 O que é Ansiedade?
-                            </h1>
+                            </h2>
                             <p
                                 className={`text-sm sm:text-base md:text-lg hidden sm:block ${isFirstLoad ? "aos-init aos-animate" : ""}`}
                                 data-aos={isFirstLoad ? "fade-up" : ""}
@@ -208,7 +208,7 @@ const Home: React.FC = () => {
 
             <section className="w-full p-6" data-aos={isFirstLoad ? "fade-up" : ""}>
                 <div className="flex items-center space-x-4 mb-4">
-                    <h1 className="text-black text-lg font-semibold">Explorar</h1>
+                    <h1 className="text-black text-lg font-semibold">Ansiedade e Autoestima</h1>
                     <Link href="/explorer" className="text-purple-900">
                         Ver mais
                     </Link>
@@ -217,18 +217,18 @@ const Home: React.FC = () => {
                     <Link href="/suport" data-aos={isFirstLoad ? "fade-up" : ""}>
                         <div className="bg-white rounded-lg shadow-md overflow-hidden">
                             <img
-                                src="/ImagesRetriever/homemdascavernas.jpg"
-                                alt="Ansiedade na pré-história"
+                                src="/ImagesRetriever/baixaautoestima1.png"
+                                alt="Ansiedade e Autoestima"
                                 className="w-full h-48 object-cover"
                             />
                             <div className="p-4">
                                 <h2 className="text-black text-md font-semibold">
-                                    Ansiedade na pré-história
+                                    Ansiedade e Autoestima
                                 </h2>
                                 <p className="text-gray-600 text-sm">
-                                    Foi a sensação de insegurança que criou o homem moderno.
-                                    Entenda aqui as origens, a importância e os efeitos da
-                                    ansiedade para nós.
+                                    Quando a ansiedade se manifesta em forma de autocrítica,
+                                    medo de julgamentos e preocupação excessiva com o que os outros pensam,
+                                    pode levar a uma diminuição da autoestima e autoconfiança.
                                 </p>
                             </div>
                         </div>
@@ -236,18 +236,17 @@ const Home: React.FC = () => {
                     <Link href="/suport" data-aos={isFirstLoad ? "fade-up" : ""} data-aos-delay="200">
                         <div className="bg-white rounded-lg shadow-md overflow-hidden">
                             <img
-                                src="/ImagesRetriever/anxietyciency.jpg"
+                                src="/ImagesRetriever/baixaautoestima2.jpeg"
                                 alt="Como a ciência explica a ansiedade e o estresse"
                                 className="w-full h-48 object-cover"
                             />
                             <div className="p-4">
                                 <h2 className="text-black text-md font-semibold">
-                                    Como a ciência explica a ansiedade e o estresse
+                                    Ansiedade pode ser sintoma de baixa autoestima
                                 </h2>
                                 <p className="text-gray-600 text-sm">
-                                    A ansiedade e o estresse podem ser causados por uma série de
-                                    fatores, entre eles a vida agitada, pressões sociais, medo,
-                                    estilo de vida, etc.
+                                    Porém, pouco se relaciona a baixa autoestima com o aparecimento de transtornos ansiosos.
+                                    Mas, será que realmente existe ligação?
                                 </p>
                             </div>
                         </div>
@@ -255,18 +254,17 @@ const Home: React.FC = () => {
                     <Link href="/suport" data-aos={isFirstLoad ? "fade-up" : ""} data-aos-delay="400">
                         <div className="bg-white rounded-lg shadow-md overflow-hidden">
                             <img
-                                src="/ImagesRetriever/anxiouwoman.jpg"
+                                src="/ImagesRetriever/baixaautoestima3.webp"
                                 alt="Transtornos de ansiedade em mulheres"
                                 className="w-full h-48 object-cover"
                             />
                             <div className="p-4">
                                 <h2 className="text-black text-md font-semibold">
-                                    Transtornos de ansiedade em mulheres
+                                    Boa autoestima pode combater os sintomas de ansiedade
                                 </h2>
                                 <p className="text-gray-600 text-sm">
-                                    Mulheres apresentam um risco significativamente maior
-                                    comparado com os homens para o desenvolvimento de
-                                    transtornos de ansiedade ao longo da vida.
+                                    Pessoas com baixa autoestima tendem a tentar corresponder às expectativas dos outros,
+                                    se desgastam com medo da opinião alheia..
                                 </p>
                             </div>
                         </div>
@@ -276,7 +274,7 @@ const Home: React.FC = () => {
 
             <section className="w-full p-6" data-aos={isFirstLoad ? "fade-up" : ""}>
                 <div className="flex items-center space-x-4 mb-4">
-                    <h1 className="text-black text-lg font-semibold">Explorar</h1>
+                    <h1 className="text-black text-lg font-semibold">Tecnologia e Ansiedade</h1>
                     <Link href="/explorer" className="text-purple-900">
                         Ver mais
                     </Link>
@@ -285,18 +283,17 @@ const Home: React.FC = () => {
                     <Link href="/suport" data-aos={isFirstLoad ? "fade-up" : ""}>
                         <div className="bg-white rounded-lg shadow-md overflow-hidden">
                             <img
-                                src="/ImagesRetriever/homemdascavernas.jpg"
+                                src="/ImagesRetriever/tecnologia1.jpg"
                                 alt="Ansiedade na pré-história"
                                 className="w-full h-48 object-cover"
                             />
                             <div className="p-4">
                                 <h2 className="text-black text-md font-semibold">
-                                    Ansiedade na pré-história
+                                    Tecnologia, crianças, adolescentes e ansiedade: o que fazer?
                                 </h2>
                                 <p className="text-gray-600 text-sm">
-                                    Foi a sensação de insegurança que criou o homem moderno.
-                                    Entenda aqui as origens, a importância e os efeitos da
-                                    ansiedade para nós.
+                                    O vício tecnológico é um tema que, cada vez mais, tem preocupado pais, educadores,
+                                    famílias, profissionais da área da saúde e a sociedade como um todo..
                                 </p>
                             </div>
                         </div>
@@ -304,18 +301,19 @@ const Home: React.FC = () => {
                     <Link href="/suport" data-aos={isFirstLoad ? "fade-up" : ""} data-aos-delay="200">
                         <div className="bg-white rounded-lg shadow-md overflow-hidden">
                             <img
-                                src="/ImagesRetriever/anxietyciency.jpg"
+                                src="/ImagesRetriever/tecnologia2.jpg"
                                 alt="Como a ciência explica a ansiedade e o estresse"
                                 className="w-full h-48 object-cover"
                             />
                             <div className="p-4">
                                 <h2 className="text-black text-md font-semibold">
-                                    Como a ciência explica a ansiedade e o estresse
+                                    Quando o uso abusivo da tecnologia leva à solidão e até depressão
                                 </h2>
                                 <p className="text-gray-600 text-sm">
-                                    A ansiedade e o estresse podem ser causados por uma série de
-                                    fatores, entre eles a vida agitada, pressões sociais, medo,
-                                    estilo de vida, etc.
+                                    Não é de hoje que os especialistas vêm estudando como a tecnologia
+                                    pode desencadear a solidão e, em casos mais graves,
+                                    até mesmo depressão..
+                                    
                                 </p>
                             </div>
                         </div>
@@ -323,18 +321,17 @@ const Home: React.FC = () => {
                     <Link href="/suport" data-aos={isFirstLoad ? "fade-up" : ""} data-aos-delay="400">
                         <div className="bg-white rounded-lg shadow-md overflow-hidden">
                             <img
-                                src="/ImagesRetriever/anxiouwoman.jpg"
+                                src="/ImagesRetriever/tecnologia3.webp"
                                 alt="Transtornos de ansiedade em mulheres"
                                 className="w-full h-48 object-cover"
                             />
                             <div className="p-4">
                                 <h2 className="text-black text-md font-semibold">
-                                    Transtornos de ansiedade em mulheres
+                                    Adolescentes contam o que causa ansiedade ao usar Whats, Insta e TikTok
                                 </h2>
                                 <p className="text-gray-600 text-sm">
-                                    Mulheres apresentam um risco significativamente maior
-                                    comparado com os homens para o desenvolvimento de
-                                    transtornos de ansiedade ao longo da vida.
+                                    O TikTok: fico passando a ForYou e acabo perdendo a noção do tempo,
+                                    deixando de realizar atividades da vida real. O WhatsApp: causa ansiedade no...
                                 </p>
                             </div>
                         </div>
