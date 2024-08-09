@@ -32,14 +32,14 @@ export default function Suport() {
                 </div>
                 <div className="container mx-auto text-center">
                     <div className="grid grid-cols-2 mt-8 gap-4">
-                        <button className="bg-white text-gray-800 font-bold py-4 rounded-full">Como posso me ajudar
+                        <button className="bg-white text-black font-bold py-4 rounded-full">Como posso me ajudar
                         </button>
-                        <button className="bg-white text-gray-800 font-bold py-4 rounded-full">Posso me ajudar?
+                        <button className="bg-white text-black font-bold py-4 rounded-full">Posso me ajudar?
                         </button>
-                        <button className="bg-white text-gray-800 font-bold py-4 rounded-full">O Retriever é
+                        <button className="bg-white text-black font-bold py-4 rounded-full">O Retriever é
                             confiável?
                         </button>
-                        <button className="bg-white text-gray-800 font-bold py-4 rounded-full">O Retriever é
+                        <button className="bg-white text-black font-bold py-4 rounded-full">O Retriever é
                             confiável?
                         </button>
                     </div>
@@ -50,9 +50,9 @@ export default function Suport() {
 
             </section>
 
-            <section className="w-full bg-purple-700 text-white py-12">
+            <section className="w-full bg-white text-white py-12">
                 <div className="container mx-auto">
-                    <h2 className="text-3xl font-bold mb-6">Dúvidas frequentes</h2>
+                    <h2 className="text-3xl text-black font-bold mb-6">Dúvidas frequentes</h2>
                     <ul className="space-y-4">
                         {[
                             "Ansiedade",
