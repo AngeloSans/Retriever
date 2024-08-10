@@ -68,6 +68,7 @@ const AnxietyAbout = () => {
                         best drive impact in enterprise environments.
                     </p>
                 </section>
+
                 <section className="w-full mt-6 bg-white flex flex-col">
                     <h2 className="mt-2 text-black font-bold text-3xl">Escrito por</h2>
                     <div className="black-stripe"></div>
@@ -85,7 +86,8 @@ const AnxietyAbout = () => {
                 <section className="w-full p-6" data-aos={isFirstLoad ? "fade-up" : ""}>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <Link href="/contentpage" className="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-500 hover:scale-105">
+                        <Link href="/contentpage"
+                              className="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-500 hover:scale-105">
                             <img
                                 src="/ImagesRetriever/homemdascavernas.jpg"
                                 alt="Ansiedade na pré-história"
@@ -102,7 +104,9 @@ const AnxietyAbout = () => {
                                 </p>
                             </div>
                         </Link>
-                        <Link href="/contentpage" className="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-500 hover:scale-105" data-aos-delay="200">
+                        <Link href="/contentpage"
+                              className="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-500 hover:scale-105"
+                              data-aos-delay="200">
                             <img
                                 src="/ImagesRetriever/anxietyciency.jpg"
                                 alt="Como a ciência explica a ansiedade e o estresse"
@@ -119,7 +123,9 @@ const AnxietyAbout = () => {
                                 </p>
                             </div>
                         </Link>
-                        <Link href="/contentpage" className="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-500 hover:scale-105" data-aos-delay="400">
+                        <Link href="/contentpage"
+                              className="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-500 hover:scale-105"
+                              data-aos-delay="400">
                             <img
                                 src="/ImagesRetriever/anxiouwoman.jpg"
                                 alt="Transtornos de ansiedade em mulheres"
