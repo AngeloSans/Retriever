@@ -6,6 +6,7 @@ import type { InferGetStaticPropsType, GetStaticProps } from 'next';
 import { getAllRelatos } from '../../sanity/lib/sanity';
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 type Relato = {
     _id: string;
@@ -47,7 +48,7 @@ const Reports = ({ relatos }: InferGetStaticPropsType<typeof getStaticProps>) =>
                             className="bg-white border border-gray-200 p-6 rounded-lg shadow-lg"
                         >
                             <div className="flex items-center space-x-4">
-                                <img
+                                <Image
                                     src={relato.photo}
                                     alt={relato.user}
                                     className="w-16 h-16 rounded-full object-cover"

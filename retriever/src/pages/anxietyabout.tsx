@@ -3,6 +3,7 @@ import Footer from "../components/Footer";
 import Nav from "../components/Nav";
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const AnxietyAbout = () => {
     const isFirstLoad = true; 
@@ -24,21 +25,21 @@ const AnxietyAbout = () => {
                         Pessoas com transtornos de ansiedade geralmente têm pensamentos intrusivos ou preocupações
                         recorrentes.
                     </p>
-                    <img className="mx-auto w-1/2 mt-8" src="/ImagesRetriever/anxietyabout.jpg" alt="Anxiety"/>
+                    <Image className="mx-auto w-1/2 mt-8" src="/ImagesRetriever/anxietyabout.jpg" alt="Anxiety"/>
                 </section>
                 <section className="mt-6 bg-white flex flex-row items-center space-x-4">
                     <p className="font-extrabold text-black">Angelo Santos</p>
                     <p className="text-black">Compartilhar</p>
                     <div className="flex items-center justify-center space-x-4 mt-2">
                         <div className="bg-purple-950 rounded-full p-2 flex items-center justify-center w-10 h-10">
-                            <img src="/ImagesRetriever/iconX.png" alt="Icon" className="w-full h-full object-contain"/>
+                            <Image src="/ImagesRetriever/iconX.png" alt="Icon" className="w-full h-full object-contain"/>
                         </div>
                         <div className="bg-purple-950 rounded-full p-2 flex items-center justify-center w-10 h-10">
-                            <img src="/ImagesRetriever/iconFacebook.png" alt="Facebook Icon"
+                            <Image src="/ImagesRetriever/iconFacebook.png" alt="Facebook Icon"
                                  className="w-full h-full object-contain"/>
                         </div>
                         <div className="bg-purple-950 rounded-full p-2 flex items-center justify-center w-10 h-10">
-                            <img src="/ImagesRetriever/iconLinkedin (2).png" alt="LinkedIn Icon"
+                            <Image src="/ImagesRetriever/iconLinkedin (2).png" alt="LinkedIn Icon"
                                  className="w-full h-full object-contain"/>
                         </div>
                     </div>
@@ -72,7 +73,7 @@ const AnxietyAbout = () => {
                 <section className="w-full mt-6 bg-white flex flex-col">
                     <h2 className="mt-2 text-black font-bold text-3xl">Escrito por</h2>
                     <div className="black-stripe"></div>
-                    <img src="/ImagesRetriever/angeloPhoto.jpg" alt="Angelo Santos"
+                    <Image src="/ImagesRetriever/angeloPhoto.jpg" alt="Angelo Santos"
                          className="mt-4 h-20 w-20 rounded-full"/>
                     <h4 className="text-black font-bold">Angelo Santos</h4>
                     <a className="text-blue-700" href="https://github.com/Anjocaido13">@anjocaido13</a>
@@ -88,7 +89,7 @@ const AnxietyAbout = () => {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <Link href="/contentpage"
                               className="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-500 hover:scale-105">
-                            <img
+                            <Image
                                 src="/ImagesRetriever/homemdascavernas.jpg"
                                 alt="Ansiedade na pré-história"
                                 className="w-full h-48 object-cover"
@@ -107,7 +108,7 @@ const AnxietyAbout = () => {
                         <Link href="/contentpage"
                               className="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-500 hover:scale-105"
                               data-aos-delay="200">
-                            <img
+                            <Image
                                 src="/ImagesRetriever/anxietyciency.jpg"
                                 alt="Como a ciência explica a ansiedade e o estresse"
                                 className="w-full h-48 object-cover"
@@ -126,7 +127,7 @@ const AnxietyAbout = () => {
                         <Link href="/contentpage"
                               className="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-500 hover:scale-105"
                               data-aos-delay="400">
-                            <img
+                            <Image
                                 src="/ImagesRetriever/anxiouwoman.jpg"
                                 alt="Transtornos de ansiedade em mulheres"
                                 className="w-full h-48 object-cover"

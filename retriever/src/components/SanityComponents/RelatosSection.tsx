@@ -1,7 +1,7 @@
-// RelatosSection.tsx
 import { useEffect, useState } from 'react';
 import { fetchRelatos } from '../Function';
 import { Relato } from '../types';
+import Image from "next/image";
 
 const RelatosSection = () => {
     const [relatos, setRelatos] = useState<Relato[]>([]);
@@ -27,7 +27,7 @@ const RelatosSection = () => {
                 {relatos.map((relato) => (
                     <div key={relato._id} className="bg-white border rounded-lg p-4 shadow-lg w-80">
                         <div className="flex items-center mb-4">
-                            <img
+                            <Image
                                 src={`https://www.instagram.com/${relato.instagram}/profile.jpg`}
                                 alt={relato.user}
                                 className="w-12 h-12 rounded-full mr-4"

@@ -5,6 +5,7 @@ import Nav from "../components/Nav";
 import Link from "next/link";
 import 'aos/dist/aos.css';
 import AOS from "aos";
+import Image from "next/image";
 
 const tiposAnsiedade = [
     {
@@ -113,7 +114,7 @@ const Home: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <Link href="/suport" data-aos={isFirstLoad ? "fade-up" : ""}>
                         <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                            <img
+                            <Image
                                 src="/ImagesRetriever/homemdascavernas.jpg"
                                 alt="Ansiedade na pré-história"
                                 className="w-full h-48 object-cover"
@@ -132,7 +133,7 @@ const Home: React.FC = () => {
                     </Link>
                     <Link href="/suport" data-aos={isFirstLoad ? "fade-up" : ""} data-aos-delay="200">
                         <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                            <img
+                            <Image
                                 src="/ImagesRetriever/anxietyciency.jpg"
                                 alt="Como a ciência explica a ansiedade e o estresse"
                                 className="w-full h-48 object-cover"
@@ -151,7 +152,7 @@ const Home: React.FC = () => {
                     </Link>
                     <Link href="/suport" data-aos={isFirstLoad ? "fade-up" : ""} data-aos-delay="400">
                         <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                            <img
+                            <Image
                                 src="/ImagesRetriever/anxiouwoman.jpg"
                                 alt="Transtornos de ansiedade em mulheres"
                                 className="w-full h-48 object-cover"
@@ -177,7 +178,7 @@ const Home: React.FC = () => {
                 </h1>
                 <div className="flex flex-col items-center md:flex-row">
                     <Link href="/explorer" className="w-full md:w-1/2 h-96 object-cover">
-                        <img
+                        <Image
                             src={imagemAtual}
                             alt="Tipos de Ansiedade"
                             className="w-full md:w-1/2 h-96 object-cover"
@@ -216,7 +217,7 @@ const Home: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <Link href="/suport" data-aos={isFirstLoad ? "fade-up" : ""}>
                         <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                            <img
+                            <Image
                                 src="/ImagesRetriever/baixaautoestima1.png"
                                 alt="Ansiedade e Autoestima"
                                 className="w-full h-48 object-cover"
@@ -235,7 +236,7 @@ const Home: React.FC = () => {
                     </Link>
                     <Link href="/suport" data-aos={isFirstLoad ? "fade-up" : ""} data-aos-delay="200">
                         <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                            <img
+                            <Image
                                 src="/ImagesRetriever/baixaautoestima2.jpeg"
                                 alt="Como a ciência explica a ansiedade e o estresse"
                                 className="w-full h-48 object-cover"
@@ -254,7 +255,7 @@ const Home: React.FC = () => {
                     </Link>
                     <Link href="/suport" data-aos={isFirstLoad ? "fade-up" : ""} data-aos-delay="400">
                         <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                            <img
+                            <Image
                                 src="/ImagesRetriever/baixaautoestima3.webp"
                                 alt="Transtornos de ansiedade em mulheres"
                                 className="w-full h-48 object-cover"
@@ -284,7 +285,7 @@ const Home: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <Link href="/suport" data-aos={isFirstLoad ? "fade-up" : ""}>
                         <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                            <img
+                            <Image
                                 src="/ImagesRetriever/tecnologia1.jpg"
                                 alt="Ansiedade na pré-história"
                                 className="w-full h-48 object-cover"
@@ -302,7 +303,7 @@ const Home: React.FC = () => {
                     </Link>
                     <Link href="/suport" data-aos={isFirstLoad ? "fade-up" : ""} data-aos-delay="200">
                         <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                            <img
+                            <Image
                                 src="/ImagesRetriever/tecnologia2.jpg"
                                 alt="Como a ciência explica a ansiedade e o estresse"
                                 className="w-full h-48 object-cover"
@@ -322,7 +323,7 @@ const Home: React.FC = () => {
                     </Link>
                     <Link href="/suport" data-aos={isFirstLoad ? "fade-up" : ""} data-aos-delay="400">
                         <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                            <img
+                            <Image
                                 src="/ImagesRetriever/tecnologia3.webp"
                                 alt="Transtornos de ansiedade em mulheres"
                                 className="w-full h-48 object-cover"

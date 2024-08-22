@@ -4,6 +4,7 @@ import Nav from '../components/Nav';
 import '../app/globals.css';
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const About = () => {
     return (
@@ -20,7 +21,7 @@ const About = () => {
             <div className="flex-grow flex flex-col items-center mt-16 px-4 md:px-8 lg:px-16 py-8 md:py-16">
                 <h1 className="text-3xl md:text-5xl font-bold text-purple-900 mb-8">Sobre nós</h1>
                 <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-4xl">
-                    <img className="w-full md:w-1/2 h-auto rounded-md shadow-lg" src="/ImagesRetriever/About.jpg" alt="About Us" />
+                    <Image className="w-full md:w-1/2 h-auto rounded-md shadow-lg" src="/ImagesRetriever/About.jpg" alt="About Us" />
                     <div className="md:ml-8 mt-8 md:mt-0 text-lg text-black space-y-4">
                         <h1 className="text-4xl font-bold">"Aquilo que você disse sem nem pensar, eu passei dias pensando."</h1>
                         <p>
@@ -55,7 +56,7 @@ const About = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <Link href="/suport">
                         <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                            <img
+                            <Image
                                 src="/ImagesRetriever/homemdascavernas.jpg"
                                 alt="Ansiedade na pré-história"
                                 className="w-full h-48 object-cover"
@@ -71,7 +72,7 @@ const About = () => {
 
                     <Link href="/suport">
                         <div className="bg-white rounded-lg shadow-md overflow-hidden" data-aos-delay="200">
-                            <img
+                            <Image
                                 src="/ImagesRetriever/anxietyciency.jpg"
                                 alt="Como a ciência explica a ansiedade e o estresse"
                                 className="w-full h-48 object-cover"
@@ -87,7 +88,7 @@ const About = () => {
 
                     <Link href="/suport">
                         <div className="bg-white rounded-lg shadow-md overflow-hidden" data-aos-delay="400">
-                            <img
+                            <Image
                                 src="/ImagesRetriever/anxiouwoman.jpg"
                                 alt="Transtornos de ansiedade em mulheres"
                                 className="w-full h-48 object-cover"

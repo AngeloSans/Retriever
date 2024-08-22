@@ -1,6 +1,7 @@
-import { useRouter } from 'next/router';
+/*import { useRouter } from 'next/router';
 import { groq } from 'next-sanity';
 import { getClient } from '../../sanity/lib/sanity';
+import Image from "next/image";
 
 const query = groq`*[_type == "post" && _id == $id][0]{
   title,
@@ -23,7 +24,7 @@ const ContentPage = ({ post }) => {
         <div>
             <h1>{post.title}</h1>
             <p>{post.content}</p>
-            <img src={post.imageUrl} alt={post.title} />
+            <Image src={post.imageUrl} alt={post.title} />
             
         </div>
     );
@@ -49,3 +50,4 @@ export async function getStaticProps({ params }) {
 }
 
 export default ContentPage;
+*/
