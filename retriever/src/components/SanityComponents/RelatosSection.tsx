@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { fetchRelatos } from '../Function';
 import { Relato } from '../types';
-import Image from "next/image";
+import Image from 'next/image';
 
 const RelatosSection = () => {
     const [relatos, setRelatos] = useState<Relato[]>([]);
@@ -30,13 +30,14 @@ const RelatosSection = () => {
                             <Image
                                 src={`https://www.instagram.com/${relato.instagram}/profile.jpg`}
                                 alt={relato.user}
-                                className="w-12 h-12 rounded-full mr-4"
+                                width={100}
+                                height={100}
                             />
                             <div>
                                 <h2 className="font-bold text-lg">{relato.user}</h2>
                             </div>
                         </div>
-                        <p className="text-gray-800 mb-4">"{relato.Mensage}"</p>
+                        <p className="text-gray-800 mb-4">&quot;{relato.Mensage}&quot;</p> {/* Escapando aspas */}
                         <p className="text-gray-600 text-sm">{new Date(relato.date).toLocaleDateString()}</p>
                     </div>
                 ))}
