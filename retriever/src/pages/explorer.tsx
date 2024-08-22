@@ -61,7 +61,7 @@ const Explorer: React.FC<ExplorerProps> = ({ posts }) => {
                             Artigos e Referências
                         </div>
                         <ul className="space-y-1 text-gray-400">
-                            <li><a href="#" className="text-sm hover:underline">Contatos</a></li>
+                            <li><Link href="#" className="text-sm hover:underline">Contatos</Link></li>
                             <li><Link href="/about" className="text-sm hover:underline">Sobre nós</Link></li>
                             <li><Link href="/suport" className="text-sm hover:underline">Ajuda</Link></li>
                         </ul>
@@ -72,7 +72,7 @@ const Explorer: React.FC<ExplorerProps> = ({ posts }) => {
                             Sei lá
                         </div>
                         <ul className="space-y-1 text-gray-400">
-                            <li><a href="#" className="text-sm hover:underline">Contatos</a></li>
+                            <li><Link href="#" className="text-sm hover:underline">Contatos</Link></li>
                             <li><Link href="/about" className="text-sm hover:underline">Sobre nós</Link></li>
                             <li><Link href="/suport" className="text-sm hover:underline">Ajuda</Link></li>
                         </ul>

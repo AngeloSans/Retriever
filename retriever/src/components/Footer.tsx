@@ -16,7 +16,7 @@ const Footer = () => {
                     <div className="space-y-1">
                         <h6 className="font-bold">Retriever</h6>
                         <ul className="space-y-1 text-gray-400">
-                            <li><a href="#" className="text-sm hover:underline">Contatos</a></li>
+                            <li><Link href="#" className="text-sm hover:underline">Contatos</Link></li>
                             <li><Link href="/about" className="text-sm hover:underline">Sobre nós</Link></li>
                             <li><Link href="/suport" className="text-sm hover:underline">Ajuda</Link></li>
                         </ul>
@@ -24,7 +24,7 @@ const Footer = () => {
                     <div className="space-y-1">
                         <h6 className="font-bold">Referências</h6>
                         <ul className="space-y-1 text-gray-400">
-                            <li><a href="/retrieveracademic" className="text-sm hover:underline">Artigos</a></li>
+                            <li><Link href="/retrieveracademic" className="text-sm hover:underline">Artigos</Link></li>
                             <li><Link href="/references" className="text-sm hover:underline">Referências</Link></li>
                         </ul>
                     </div>
