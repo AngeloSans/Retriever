@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { fetchRelatos } from '../Function';
-import { Relato } from '../types';
+import { fetchRelatos } from '../../../Functions/Relatos';
+import { Relato } from '../../sanity/lib/sanity';
 import Image from 'next/image';
 
 const RelatosSection = () => {

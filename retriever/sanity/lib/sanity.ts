@@ -12,7 +12,7 @@ interface Post {
     image: string;
 }
 
-const client = createClient({
+export const client = createClient({
     projectId: 'f6zsx54e',
     dataset: 'retriever',
     apiVersion: '2024-06-16',
