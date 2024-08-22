@@ -1,11 +1,24 @@
 import { createClient } from '@sanity/client';
 
+interface Post {
+    _id: string;
+    title: string;
+    summary: string;
+    content: string;
+    likes: number;
+    date: string;
+    owner: string;
+    type: string;
+    image: string;
+}
+
 const client = createClient({
     projectId: 'f6zsx54e',
     dataset: 'retriever',
     apiVersion: '2024-06-16',
     useCdn: true,
 });
+
 
 export async function getAllRelatos() {
     const query = `*[_type == "relatos"] {
@@ -20,14 +33,14 @@ export async function getAllRelatos() {
         console.log("Relatos fetched:", relatos);
         return relatos;
     } catch (error) {
-        // Type assertion to ensure `error` is an `Error` object
         const errorMessage = (error as Error).message || 'Unknown error occurred';
         console.error("Error fetching relatos:", errorMessage);
         throw error;
     }
 }
 
-export async function getAllPosts() {
+
+export async function getAllPosts(): Promise<Post[]> {
     const query = `*[_type == "post"] {
         _id,
         title,
@@ -50,6 +63,7 @@ export async function getAllPosts() {
     }
 }
 
+
 export async function getPostById(id: string) {
     const query = `*[_type == "post" && _id == $id][0] {
         _id,
@@ -68,16 +82,16 @@ export async function getPostById(id: string) {
         console.log("Post fetched:", post);
         return post;
     } catch (error) {
-        // Type assertion to ensure `error` is an `Error` object
         const errorMessage = (error as Error).message || 'Unknown error occurred';
         console.error("Error fetching post by ID:", errorMessage);
         throw error;
     }
 }
 
+
 export async function getAllPostIds() {
     const posts = await getAllPosts();
-    return posts.map(post => ({
+    return posts.map((post: Post) => ({
         params: { id: post._id }
     }));
 }
