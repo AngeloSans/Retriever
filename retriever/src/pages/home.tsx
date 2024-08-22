@@ -11,22 +11,32 @@ const tiposAnsiedade = [
     {
         tipo: "Transtorno de Pânico",
         img: "/ImagesRetriever/panico.jpg",
+        width: 500, 
+        height: 300,
     },
     {
         tipo: "Agorafobia",
         img: "/ImagesRetriever/agorafobia.jpg",
+        width: 500,
+        height: 300,
     },
     {
         tipo: "Fobias Específicas",
         img: "/ImagesRetriever/fobiasespecificas.jpg",
+        width: 500,
+        height: 300,
     },
     {
         tipo: "Transtorno de Ansiedade Social ou fobia social",
         img: "/ImagesRetriever/fobiasocial.jpg",
+        width: 500,
+        height: 300,
     },
     {
         tipo: "Transtorno de Ansiedade Generalizada",
         img: "/ImagesRetriever/tag.jpg",
+        width: 500,
+        height: 300,
     },
 ];
 
@@ -118,6 +128,8 @@ const Home: React.FC = () => {
                                 src="/ImagesRetriever/homemdascavernas.jpg"
                                 alt="Ansiedade na pré-história"
                                 className="w-full h-48 object-cover"
+                                width={500}
+                                height={300}
                             />
                             <div className="p-4">
                                 <h2 className="text-black text-md font-semibold">
@@ -137,6 +149,8 @@ const Home: React.FC = () => {
                                 src="/ImagesRetriever/anxietyciency.jpg"
                                 alt="Como a ciência explica a ansiedade e o estresse"
                                 className="w-full h-48 object-cover"
+                                width={500}
+                                height={300}
                             />
                             <div className="p-4">
                                 <h2 className="text-black text-md font-semibold">
@@ -156,6 +170,8 @@ const Home: React.FC = () => {
                                 src="/ImagesRetriever/anxiouwoman.jpg"
                                 alt="Transtornos de ansiedade em mulheres"
                                 className="w-full h-48 object-cover"
+                                width={500}
+                                height={300}
                             />
                             <div className="p-4">
                                 <h2 className="text-black text-md font-semibold">
@@ -182,6 +198,8 @@ const Home: React.FC = () => {
                             src={imagemAtual}
                             alt="Tipos de Ansiedade"
                             className="w-full md:w-1/2 h-96 object-cover"
+                            width={500}
+                            height={300}
                         />
                     </Link>
 
@@ -221,6 +239,8 @@ const Home: React.FC = () => {
                                 src="/ImagesRetriever/baixaautoestima1.png"
                                 alt="Ansiedade e Autoestima"
                                 className="w-full h-48 object-cover"
+                                width={500}
+                                height={300}
                             />
                             <div className="p-4">
                                 <h2 className="text-black text-md font-semibold">
@@ -240,6 +260,8 @@ const Home: React.FC = () => {
                                 src="/ImagesRetriever/baixaautoestima2.jpeg"
                                 alt="Como a ciência explica a ansiedade e o estresse"
                                 className="w-full h-48 object-cover"
+                                width={500}
+                                height={300}
                             />
                             <div className="p-4">
                                 <h2 className="text-black text-md font-semibold">
@@ -259,6 +281,8 @@ const Home: React.FC = () => {
                                 src="/ImagesRetriever/baixaautoestima3.webp"
                                 alt="Transtornos de ansiedade em mulheres"
                                 className="w-full h-48 object-cover"
+                                width={500}
+                                height={300}
                             />
                             <div className="p-4">
                                 <h2 className="text-black text-md font-semibold">
@@ -289,6 +313,8 @@ const Home: React.FC = () => {
                                 src="/ImagesRetriever/tecnologia1.jpg"
                                 alt="Ansiedade na pré-história"
                                 className="w-full h-48 object-cover"
+                                width={500}
+                                height={300}
                             />
                             <div className="p-4">
                                 <h2 className="text-black text-md font-semibold">
@@ -307,6 +333,8 @@ const Home: React.FC = () => {
                                 src="/ImagesRetriever/tecnologia2.jpg"
                                 alt="Como a ciência explica a ansiedade e o estresse"
                                 className="w-full h-48 object-cover"
+                                width={500}
+                                height={300}
                             />
                             <div className="p-4">
                                 <h2 className="text-black text-md font-semibold">
@@ -327,6 +355,8 @@ const Home: React.FC = () => {
                                 src="/ImagesRetriever/tecnologia3.webp"
                                 alt="Transtornos de ansiedade em mulheres"
                                 className="w-full h-48 object-cover"
+                                width={500}
+                                height={300}
                             />
                             <div className="p-4">
                                 <h2 className="text-black text-md font-semibold">
