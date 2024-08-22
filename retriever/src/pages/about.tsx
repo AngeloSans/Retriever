@@ -23,7 +23,7 @@ const About = () => {
                 <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-4xl">
                     <Image className="w-full md:w-1/2 h-auto rounded-md shadow-lg" src="/ImagesRetriever/About.jpg" alt="About Us" />
                     <div className="md:ml-8 mt-8 md:mt-0 text-lg text-black space-y-4">
-                        <h1 className="text-4xl font-bold">"Aquilo que você disse sem nem pensar, eu passei dias pensando."</h1>
+                        <h1 className="text-4xl font-bold">Aquilo que você disse sem nem pensar, eu passei dias pensando.</h1>
                         <p>
                             Retriever é um portal dedicado a trazer informações e apoio a pessoas que sofrem de ansiedade. Nosso objetivo é fornecer notícias, divulgar os diferentes tipos de ansiedade e compartilhar relatos de experiências pessoais.
                         </p>
