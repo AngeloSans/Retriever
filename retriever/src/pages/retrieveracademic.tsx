@@ -4,9 +4,15 @@ import Footer from '../components/Footer';
 import React, { useState } from 'react';
 import '../app/globals.css';
 
+interface SearchResult {
+    title: string;
+    authors: string;
+}
+
 export default function RetrieverAcademic() {
-    const [query, setQuery] = useState('');
-    const [results, setResults] = useState([]);
+    
+    const [query, setQuery] = useState<string>('');
+    const [results, setResults] = useState<SearchResult[]>([]);
 
     const handleSearch = async () => {
         
@@ -27,7 +33,7 @@ export default function RetrieverAcademic() {
                     <Nav />
                 </div>
                 <h1 className="text-4xl mt-20 font-bold">Retriever Acadêmico</h1>
-                <p className="text-black">Pesquise o seu material academico sobre ansiedade</p>
+                <p className="text-black">Pesquise o seu material acadêmico sobre ansiedade</p>
                 <div className="search-container flex mt-1 w-full max-w-3xl mx-auto">
                     <input
                         type="text"
