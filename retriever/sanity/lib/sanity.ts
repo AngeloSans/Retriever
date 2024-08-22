@@ -20,7 +20,9 @@ export async function getAllRelatos() {
         console.log("Relatos fetched:", relatos);
         return relatos;
     } catch (error) {
-        console.error("Error fetching relatos:", error.message);
+        // Type assertion to ensure `error` is an `Error` object
+        const errorMessage = (error as Error).message || 'Unknown error occurred';
+        console.error("Error fetching relatos:", errorMessage);
         throw error;
     }
 }
@@ -42,7 +44,8 @@ export async function getAllPosts() {
         console.log("Posts fetched:", posts);
         return posts;
     } catch (error) {
-        console.error("Error fetching posts:", error.message);
+        const errorMessage = (error as Error).message || 'Unknown error occurred';
+        console.error("Error fetching posts:", errorMessage);
         throw error;
     }
 }
@@ -65,7 +68,9 @@ export async function getPostById(id: string) {
         console.log("Post fetched:", post);
         return post;
     } catch (error) {
-        console.error("Error fetching post by ID:", error.message);
+        // Type assertion to ensure `error` is an `Error` object
+        const errorMessage = (error as Error).message || 'Unknown error occurred';
+        console.error("Error fetching post by ID:", errorMessage);
         throw error;
     }
 }
