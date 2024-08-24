@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+/*import { useEffect, useState } from 'react';
 import { fetchRelatos } from '../../../Functions/Relatos';
 import { Relato } from '../../sanity/lib/sanity';
 import Image from 'next/image';
@@ -37,7 +37,7 @@ const RelatosSection = () => {
                                 <h2 className="font-bold text-lg">{relato.user}</h2>
                             </div>
                         </div>
-                        <p className="text-gray-800 mb-4">&quot;{relato.Mensage}&quot;</p> {/* Escapando aspas */}
+                        <p className="text-gray-800 mb-4">&quot;{relato.Mensage}&quot;</p> 
                         <p className="text-gray-600 text-sm">{new Date(relato.date).toLocaleDateString()}</p>
                     </div>
                 ))}
@@ -47,3 +47,4 @@ const RelatosSection = () => {
 };
 
 export default RelatosSection;
+*/
