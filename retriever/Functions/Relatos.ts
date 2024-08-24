@@ -1,4 +1,4 @@
-import { client } from '../sanity/lib/sanity';
+/*import { client } from '../sanity/lib/sanity';
 import { Relato } from '../sanity/lib/sanity';
 
 export const fetchRelatos = async (): Promise<Relato[]> => {
@@ -11,3 +11,4 @@ export const fetchRelatos = async (): Promise<Relato[]> => {
         throw error;
     }
 };
+*/
