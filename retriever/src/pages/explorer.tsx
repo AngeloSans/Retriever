@@ -2,8 +2,8 @@ import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import Footer from '../components/Footer';
 import Nav from '../components/Nav';
+import   Post  from "./types";
 import TopicCard from '../components/TopicCard';
-import { getAllPosts } from '../../sanity/lib/sanity';
 import '../app/globals.css';
 import React from 'react';
 import Link from "next/link";
@@ -85,7 +85,7 @@ const Explorer: React.FC<ExplorerProps> = ({ posts }) => {
     );
 };
 
-export const getStaticProps: GetStaticProps<ExplorerProps> = async () => {
+/*export const getStaticProps: GetStaticProps<ExplorerProps> = async () => {
     const posts: Post[] = await getAllPosts();
     return {
         props: {
@@ -94,5 +94,5 @@ export const getStaticProps: GetStaticProps<ExplorerProps> = async () => {
         revalidate: 60,
     };
 };
-
+*/
 export default Explorer;
