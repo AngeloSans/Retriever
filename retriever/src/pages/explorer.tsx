@@ -7,6 +7,7 @@ import TopicCard from '../components/TopicCard';
 import '../app/globals.css';
 import React from 'react';
 import Link from "next/link";
+import {getAllPosts} from "../../sanity/lib/sanity";
 
 interface Post {
     id: string;
@@ -36,7 +37,7 @@ const Explorer: React.FC<ExplorerProps> = ({ posts }) => {
             </div>
 
             <div className="container mx-auto p-4 mt-40 flex">
-                {/* Coluna dos Cards */}
+                
                 <div className="flex-1 space-y-20">
                     <h1 className="text-4xl font-bold mb-6">Explorar</h1>
                     {posts.map((post) => (
@@ -85,7 +86,7 @@ const Explorer: React.FC<ExplorerProps> = ({ posts }) => {
     );
 };
 
-/*export const getStaticProps: GetStaticProps<ExplorerProps> = async () => {
+export const getStaticProps: GetStaticProps<ExplorerProps> = async () => {
     const posts: Post[] = await getAllPosts();
     return {
         props: {
@@ -94,5 +95,7 @@ const Explorer: React.FC<ExplorerProps> = ({ posts }) => {
         revalidate: 60,
     };
 };
-*/
+
+
+
 export default Explorer;
