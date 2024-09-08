@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Head from "next/head";
 import Footer from "../components/Footer";
 import Nav from "../components/Nav";
 import Link from "next/link";
@@ -72,12 +71,7 @@ const Home: React.FC = () => {
 
     return (
         <main className="bg-white flex flex-col min-h-screen items-center justify-between p-0">
-            <Head>
-                <link
-                    href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap"
-                    rel="stylesheet"
-                />
-            </Head>
+            
             <div className="relative w-full bg-cover bg-center">
                 <Nav/>
             </div>
