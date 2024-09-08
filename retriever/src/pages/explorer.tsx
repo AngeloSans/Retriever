@@ -1,4 +1,4 @@
-import { GetStaticProps } from 'next';
+/*import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import Footer from '../components/Footer';
 import Nav from '../components/Nav';
@@ -99,3 +99,4 @@ export const getStaticProps: GetStaticProps<ExplorerProps> = async () => {
 
 
 export default Explorer;
+*/
