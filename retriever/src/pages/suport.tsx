@@ -26,20 +26,20 @@ export default function Suport() {
                 <Nav/>
             </div>
 
-            <section className="w-full bg-purple-700 mt-20 text-white py-12">
+            <section className="w-full  bg-purple-700 mt-20 text-white py-12">
                 <div className="container mx-auto text-center">
-                    <h2 className="text-5xl font-bold mb-6">Como Podemos Te Ajudar ?</h2>
+                    <h2 className="text-2xl font-bold mb-6">Como Podemos Te Ajudar ?</h2>
                 </div>
                 <div className="container mx-auto text-center">
                     <div className="grid grid-cols-2 mt-8 gap-4">
-                        <button className="bg-white text-black font-bold py-4 rounded-full">Como posso me ajudar
+                        <button className="bg-white text-black font-bold py-3 rounded-full">Como posso me ajudar
                         </button>
-                        <button className="bg-white text-black font-bold py-4 rounded-full">Posso me ajudar?
+                        <button className="bg-white text-black font-bold py-3 rounded-full">Posso me ajudar?
                         </button>
-                        <button className="bg-white text-black font-bold py-4 rounded-full">O Retriever é
+                        <button className="bg-white text-black font-bold py-3 rounded-full">O Retriever é
                             confiável?
                         </button>
-                        <button className="bg-white text-black font-bold py-4 rounded-full">O Retriever é
+                        <button className="bg-white text-black font-bold py-3 rounded-full">O Retriever é
                             confiável?
                         </button>
                     </div>

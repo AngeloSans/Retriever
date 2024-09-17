@@ -1,6 +1,5 @@
 /*import { useRouter } from 'next/router';
 import { groq } from 'next-sanity';
-import { getClient } from '../../sanity/lib/sanity';
 import Image from "next/image";
 
 const query = groq`*[_type == "post" && _id == $id][0]{
@@ -14,7 +13,7 @@ const query = groq`*[_type == "post" && _id == $id][0]{
   "imageUrl": image.asset->url
 }`;
 
-const ContentPage = ({ post }) => {
+function ContentPage({ post }) {
     const router = useRouter();
     if (router.isFallback) {
         return <div>Loading...</div>;
@@ -25,14 +24,14 @@ const ContentPage = ({ post }) => {
             <h1>{post.title}</h1>
             <p>{post.content}</p>
             <Image src={post.imageUrl} alt={post.title} />
-            
+
         </div>
     );
-};
+}
 
 export async function getStaticPaths() {
     const posts = await getClient().fetch(groq`*[_type == "post"]{_id}`);
-    const paths = posts.map((post) => ({
+    const paths = posts.map((post: { _id: any; }) => ({
         params: { id: post._id },
     }));
 
@@ -50,4 +49,8 @@ export async function getStaticProps({ params }) {
 }
 
 export default ContentPage;
+function getClient() {
+    throw new Error('Function not implemented.');
+}
+
 */

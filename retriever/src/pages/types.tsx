@@ -54,6 +54,8 @@ const Types = () => {
                             <article className="bg-white rounded-lg shadow-md overflow-hidden max-w-sm mx-auto">
                                 <Image src="/ImagesRetriever/ansiedadesocialtypes.jpg"
                                      alt="Transtorno de Ansiedade Social"
+                                     width={500}
+                                     height={500}
                                      className="w-full h-64 object-cover mb-4"/>
                                 <div className="px-4">
                                     <h3 className="text-xl font-semibold text-black mb-2">Transtorno de Ansiedade Social: o que é, sintomas e tratamento</h3>
@@ -66,7 +68,9 @@ const Types = () => {
                         <Link href="/about">
                             <article className="bg-white rounded-lg shadow-md overflow-hidden max-w-sm mx-auto">
                                 <Image src="/ImagesRetriever/panicotypes.jpg" alt="Ansiedade em Crianças"
-                                     className="w-full h-64 object-cover mb-4"/>
+                                     className="w-full h-64 object-cover mb-4"
+                                     width={500}
+                                     height={500}/>
                                 <div className="px-4">
                                     <h3 className="text-xl font-semibold text-black mb-2">Entenda o que é ansiedade social e como se manifesta nas crianças</h3>
                                     <p className="text-gray-700">Ansiedade em crianças.</p>
@@ -78,7 +82,9 @@ const Types = () => {
                         <Link href="/about">
                             <article className="bg-white rounded-lg shadow-md overflow-hidden max-w-sm mx-auto">
                                 <Image src="/ImagesRetriever/toctypes.jpg" alt="Ansiedade e Fobia Social"
-                                     className="w-full h-64 object-cover mb-4"/>
+                                     className="w-full h-64 object-cover mb-4"
+                                     width={500}
+                                     height={500}/>
                                 <div className="px-4">
                                     <h3 className="text-xl font-semibold text-black mb-2">Fobia social quando o sofrimento pela timidez é tanto que a saída é se esconder</h3>
                                     <p className="text-gray-700">Ansiedade e fobia social.</p>
@@ -90,7 +96,9 @@ const Types = () => {
                         <Link href="/about">
                             <article className="bg-white rounded-lg shadow-md overflow-hidden max-w-sm mx-auto">
                                 <Image src="/ImagesRetriever/tdahtypes.jpeg" alt="Ansiedade e Fobia Social"
-                                     className="w-full h-64 object-cover mb-4"/>
+                                     className="w-full h-64 object-cover mb-4"
+                                     width={500}
+                                     height={500}/>
                                 <div className="px-4">
                                     <h3 className="text-xl font-semibold text-black mb-2">Fobia social quando o sofrimento pela timidez é tanto que a saída é se esconder</h3>
                                     <p className="text-gray-700">Ansiedade e fobia social.</p>

@@ -183,7 +183,7 @@ const Home: React.FC = () => {
             </section>
 
             <section className="w-full p-6" data-aos={isFirstLoad ? "fade-up" : ""}>
-                <h1 className="text-black text-lg font-semibold mb-4">
+                <h1 className="text-black text-center text-2xl font-bold mb-4">
                     Descubra os Tipos de Ansiedade
                 </h1>
                 <div className="flex flex-col items-center md:flex-row">
@@ -191,8 +191,8 @@ const Home: React.FC = () => {
                         <Image
                             src={imagemAtual}
                             alt="Tipos de Ansiedade"
-                            className="w-full md:w-1/2 h-96 object-cover"
-                            width={500}
+                            className="w-full md:w-2/2 h-96 object-cover"
+                            width={600}
                             height={300}
                         />
                     </Link>

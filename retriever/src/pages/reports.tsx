@@ -51,6 +51,8 @@ const Reports = ({ relatos }: InferGetStaticPropsType<typeof getStaticProps>) =>
                                 <Image
                                     src={relato.photo}
                                     alt={relato.user}
+                                    width={500}
+                                     height={500}
                                     className="w-16 h-16 rounded-full object-cover"
                                 />
                                 <div>

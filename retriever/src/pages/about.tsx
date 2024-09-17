@@ -20,7 +20,8 @@ const About = () => {
             <div className="flex-grow flex flex-col items-center mt-16 px-4 md:px-8 lg:px-16 py-8 md:py-16">
                 <h1 className="text-3xl md:text-5xl font-bold text-purple-900 mb-8">Sobre nós</h1>
                 <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-4xl">
-                    <Image className="w-full md:w-1/2 h-auto rounded-md shadow-lg" src="/ImagesRetriever/About.jpg" alt="About Us" />
+                    <Image className="w-full md:w-1/2 h-auto rounded-md shadow-lg" width={500}
+                                     height={500} src="/ImagesRetriever/About.jpg" alt="About Us" />
                     <div className="md:ml-8 mt-8 md:mt-0 text-lg text-black space-y-4">
                         <h1 className="text-4xl font-bold">Aquilo que você disse sem nem pensar, eu passei dias pensando.</h1>
                         <p>

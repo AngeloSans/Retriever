@@ -1,4 +1,4 @@
-/*import { GetStaticProps } from 'next';
+import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import Footer from '../components/Footer';
 import Nav from '../components/Nav';
@@ -86,17 +86,15 @@ const Explorer: React.FC<ExplorerProps> = ({ posts }) => {
     );
 };
 
-export const getStaticProps: GetStaticProps<ExplorerProps> = async () => {
-    const posts: Post[] = await getAllPosts();
+export async function getStaticProps() {
     return {
         props: {
-            posts,
+            posts: await getAllPosts(),
         },
         revalidate: 60,
     };
-};
+}
 
 
 
 export default Explorer;
-*/

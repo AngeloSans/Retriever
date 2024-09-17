@@ -17,6 +17,7 @@
     "next-sanity": "^9.3.10",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "retriever": "file:",
     "sanity": "^3.46.1",
     "styled-components": "^6.1.11"
   },
