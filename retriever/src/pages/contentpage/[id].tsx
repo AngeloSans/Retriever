@@ -1,8 +1,7 @@
-/*
-///aqui foi meu primeiro teste de pagina dinamica llkkkkk
+import { GetStaticPaths, GetStaticProps } from 'next';
+import { getPostById, getAllPostIds } from '../../../sanity/lib/sanity';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
-import { getPostById} from '../../sanity/lib/sanity';
 
 interface Post {
     id: string;
@@ -40,11 +39,14 @@ function ContentPage({ post }: ContentPageProps) {
     );
 }
 
-
 export async function getStaticProps({ params }: { params: Params }) {
     const post = await getPostById(params.id);
 
-    console.log("Post fetched:", post); 
+    if (!post) {
+        return {
+            notFound: true,
+        };
+    }
 
     return {
         props: {
@@ -54,5 +56,24 @@ export async function getStaticProps({ params }: { params: Params }) {
     };
 }
 
+export const getStaticPaths: GetStaticPaths = async () => {
+    try {
+        const paths = await getAllPostIds();
+        
+        // Verifique os caminhos retornados
+        console.log('Paths:', paths);
+
+        return {
+            paths,
+            fallback: 'blocking', 
+        };
+    } catch (error) {
+        console.error('Error fetching paths:', error);
+        return {
+            paths: [],
+            fallback: 'blocking',
+        };
+    }
+};
+
 export default ContentPage;
-*/

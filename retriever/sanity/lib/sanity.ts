@@ -65,7 +65,8 @@ export async function getAllPosts(): Promise<Post[]> {
 
 
 export async function getPostById(id: string) {
-    const query = `*[_type == "post" && id == $id] {
+    const query = `*[id == $id] {
+        _id,
         title,
         summary,
         content,
