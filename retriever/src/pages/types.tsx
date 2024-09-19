@@ -48,10 +48,10 @@ const Types = () => {
                     </div>
                 </section>
 
-                <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <section className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-1 gap-1">
                     {selectedType === 'Social' && (
-                        <Link href="/about">
-                            <article className="bg-white rounded-lg shadow-md overflow-hidden max-w-sm mx-auto">
+                        
+                            <article className="bg-white align rounded-lg shadow-md overflow-hidden lg:max-w-md mx-auto">
                                 <Image src="/ImagesRetriever/ansiedadesocialtypes.jpg"
                                      alt="Transtorno de Ansiedade Social"
                                      width={500}
@@ -62,7 +62,7 @@ const Types = () => {
                                     <p className="text-gray-700">Transtorno de ansiedade social.</p>
                                 </div>
                             </article>
-                        </Link>
+        
                     )}
                     {selectedType === 'Pânico' && (
                         <Link href="/about">
