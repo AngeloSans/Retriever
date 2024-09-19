@@ -42,7 +42,7 @@ const Explorer: React.FC<ExplorerProps> = ({ posts }) => {
                     <h1 className="text-4xl font-bold mb-6">Explorar</h1>
                     {posts.map((post) => (
                         <TopicCard
-                            key={post.id}
+                
                             id={post.id}
                             title={post.title}
                             summary={post.summary}

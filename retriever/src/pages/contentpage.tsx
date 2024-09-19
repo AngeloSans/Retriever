@@ -1,20 +1,30 @@
-/*import { useRouter } from 'next/router';
-import { groq } from 'next-sanity';
-import Image from "next/image";
+import { useRouter } from 'next/router';
+import Image from 'next/image';
+import { getPostById} from '../../sanity/lib/sanity';
 
-const query = groq`*[_type == "post" && _id == $id][0]{
-  title,
-  summary,
-  content,
-  likes,
-  date,
-  owner,
-  type,
-  "imageUrl": image.asset->url
-}`;
+interface Post {
+    _id: string;
+    title: string;
+    summary: string;
+    content: string;
+    likes: number;
+    date: string;
+    owner: string;
+    type: string;
+    imageUrl: string;
+}
 
-function ContentPage({ post }) {
+interface Params {
+    id: string;
+}
+
+interface ContentPageProps {
+    post: Post;
+}
+
+function ContentPage({ post }: ContentPageProps) {
     const router = useRouter();
+
     if (router.isFallback) {
         return <div>Loading...</div>;
     }
@@ -23,34 +33,23 @@ function ContentPage({ post }) {
         <div>
             <h1>{post.title}</h1>
             <p>{post.content}</p>
-            <Image src={post.imageUrl} alt={post.title} />
-
+            <Image src={post.imageUrl} alt={post.title} width={800} height={500} />
         </div>
     );
 }
 
-export async function getStaticPaths() {
-    const posts = await getClient().fetch(groq`*[_type == "post"]{_id}`);
-    const paths = posts.map((post: { _id: any; }) => ({
-        params: { id: post._id },
-    }));
 
-    return { paths, fallback: true };
-}
+export async function getStaticProps({ params }: { params: Params }) {
+    const post = await getPostById(params.id);
 
-export async function getStaticProps({ params }) {
-    const post = await getClient().fetch(query, { id: params.id });
+    console.log("Post fetched:", post); 
 
     return {
         props: {
             post,
         },
+        revalidate: 60,
     };
 }
 
 export default ContentPage;
-function getClient() {
-    throw new Error('Function not implemented.');
-}
-
-*/

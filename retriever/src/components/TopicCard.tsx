@@ -15,7 +15,7 @@ interface TopicCardProps {
 
 const TopicCard: React.FC<TopicCardProps> = ({ id, title, summary, image }) => {
     return (
-        <Link href={`/contentpage/${id}`} passHref>
+        <Link href={`/contentpage/${id}` } passHref>
             <div className="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer mb-6 max-w-sm">
                 <Image src={image} alt={title} height={1800} width={1800} className="w-full h-48 object-cover" />
                 <div className="p-4">
