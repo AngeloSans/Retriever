@@ -60,7 +60,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
     try {
         const paths = await getAllPostIds();
         
-        // Verifique os caminhos retornados
         console.log('Paths:', paths);
 
         return {
