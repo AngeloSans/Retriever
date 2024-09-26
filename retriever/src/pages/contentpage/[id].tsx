@@ -35,6 +35,7 @@ function ContentPage({ post }: ContentPageProps) {
             <h1>{post.title}</h1>
             <p>{post.content}</p>
             <Image src={post.imageUrl} alt={post.title} width={800} height={500} />
+            <h1 color='white'>voce consegue boy</h1>
         </div>
     );
 }
@@ -55,6 +56,7 @@ export async function getStaticProps({ params }: { params: Params }) {
         revalidate: 60,
     };
 }
+
 
 export const getStaticPaths: GetStaticPaths = async () => {
     try {

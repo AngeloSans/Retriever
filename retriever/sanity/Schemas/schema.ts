@@ -8,11 +8,6 @@ export const schema: { types: SchemaTypeDefinition[] } = {
       title: 'Post',
       fields: [
         defineField({
-          name: 'id',
-          title: 'ID',
-          type: 'string',
-        }),
-        defineField({
           name: 'title',
           title: 'Title',
           type: 'string',
