@@ -10,7 +10,7 @@ import Link from "next/link";
 import {getAllPosts} from "../../sanity/lib/sanity";
 
 interface Post {
-    id: string;
+    _id: string;
     title: string;
     summary: string;
     date: string;
@@ -42,8 +42,8 @@ const Explorer: React.FC<ExplorerProps> = ({ posts }) => {
                     <h1 className="text-4xl font-bold mb-6">Explorar</h1>
                     {posts.map((post) => (
                         <TopicCard
-                            key={post.id}
-                            id={post.id}
+                            key={post._id}
+                            _id={post._id}
                             title={post.title}
                             summary={post.summary}
                             date={post.date}

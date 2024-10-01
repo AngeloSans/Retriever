@@ -1,9 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from "next/image";
+import { client } from '@/sanity/lib/client';
 
-interface TopicCardProps {
-    id: string;
+interface post {
+    _id: string;
     title: string;
     summary: string;
     date: string;
@@ -13,9 +14,9 @@ interface TopicCardProps {
     type: string;
 }
 
-const TopicCard: React.FC<TopicCardProps> = ({ id, title, summary, image }) => {
+const TopicCard: React.FC<post> = ({ _id, title, summary, image }) => {
     return (
-        <Link href={`/contentpage/${id}` } passHref>
+        <Link href={`/contentpage/${_id}` } passHref>
             <div className="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer mb-6 max-w-sm">
                 <Image src={image} alt={title} height={1800} width={1800} className="w-full h-48 object-cover" />
                 <div className="p-4">
@@ -26,5 +27,16 @@ const TopicCard: React.FC<TopicCardProps> = ({ id, title, summary, image }) => {
         </Link>
     );
 };
+
+export const getStaticProps = async () => {
+    const query = `*[_type == "post"]{ _id, title, summary, "image": image.asset->url }`;
+    const posts = await client.fetch(query);
+  
+    return {
+      props: {
+        posts,
+      },
+    };
+  };
 
 export default TopicCard;

@@ -1,80 +1,68 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
-import { getPostById, getAllPostIds } from '../../../sanity/lib/sanity';
+import { client } from '../../../sanity/lib/sanity'; 
 import { useRouter } from 'next/router';
-import Image from 'next/image';
+
+interface PostImage {
+  asset: {
+    url: string;
+  };
+}
 
 interface Post {
-    id: string;
-    title: string;
-    summary: string;
-    content: string;
-    likes: number;
-    date: string;
-    owner: string;
-    type: string;
-    imageUrl: string;
+  _id: string;
+  title: string;
+  summary: string;
 }
 
-interface Params {
-    id: string;
+interface PostPageProps {
+  post: Post;
 }
 
-interface ContentPageProps {
-    post: Post;
-}
+const PostPage = ({ post }: PostPageProps) => {
+  const router = useRouter();
 
-function ContentPage({ post }: ContentPageProps) {
-    const router = useRouter();
+  if (router.isFallback) {
+    return <div>Loading...</div>;
+  }
 
-    if (router.isFallback) {
-        return <div>Loading...</div>;
-    }
-
-    return (
-        <div>
-            <h1>{post.title}</h1>
-            <p>{post.content}</p>
-            <Image src={post.imageUrl} alt={post.title} width={800} height={500} />
-            <h1 color='white'>voce consegue boy</h1>
-        </div>
-    );
-}
-
-export async function getStaticProps({ params }: { params: Params }) {
-    const post = await getPostById(params.id);
-
-    if (!post) {
-        return {
-            notFound: true,
-        };
-    }
-
-    return {
-        props: {
-            post,
-        },
-        revalidate: 60,
-    };
-}
-
-
-export const getStaticPaths: GetStaticPaths = async () => {
-    try {
-        const paths = await getAllPostIds();
-        
-        console.log('Paths:', paths);
-
-        return {
-            paths,
-            fallback: 'blocking', 
-        };
-    } catch (error) {
-        console.error('Error fetching paths:', error);
-        return {
-            paths: [],
-            fallback: 'blocking',
-        };
-    }
+  return (
+    <div>
+      <h1>{post.title}</h1>
+      <div>{post.summary}</div>
+    </div>
+  );
 };
 
-export default ContentPage;
+export const getStaticPaths: GetStaticPaths = async () => {
+    const query = `*[_type == "post"]{ _id }`;
+    const posts = await client.fetch(query);
+  
+    const paths = posts.map((post: { _id: string }) => ({
+      params: { id: post._id },
+    }));
+  
+    return {
+      paths,
+      fallback: true,
+    };
+};
+  
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+    const query = `*[_type == "post" && _id == $id][0]`;
+    const post = await client.fetch(query, { id: params?.id });
+  
+    if (!post) {
+      return {
+        notFound: true,
+      };
+    }
+  
+    return {
+      props: {
+        post,
+      },
+      revalidate: 60,
+    };
+};
+  
+export default PostPage;

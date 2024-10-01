@@ -11,15 +11,15 @@
   "dependencies": {
     "@sanity/client": "^6.20.1",
     "@sanity/image-url": "^1.0.2",
-    "@sanity/vision": "^3.46.1",
+    "@sanity/vision": "^3.58.0",
     "aos": "^2.3.4",
     "next": "^14.2.4",
-    "next-sanity": "^9.3.10",
+    "next-sanity": "^9.5.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "retriever": "file:",
-    "sanity": "^3.46.1",
-    "styled-components": "^6.1.11"
+    "sanity": "^3.58.0",
+    "styled-components": "^6.1.13"
   },
   "devDependencies": {
     "@types/aos": "^3.0.7",
