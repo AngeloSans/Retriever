@@ -48,7 +48,7 @@ const PostPage = ({ post }: PostPageProps) => {
     setPopupVisible(true);
   };
 
-  const handleEmailSubmit = (e) => {
+  const handleEmailSubmit = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
   
     if (email && /\S+@\S+\.\S+/.test(email)) {
