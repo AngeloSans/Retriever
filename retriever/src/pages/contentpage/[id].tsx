@@ -9,7 +9,10 @@ interface Post {
   _id: string;
   title: string;
   summary: string;
-  image: string; 
+  image: string;
+  likes: string;
+  content: string;
+  owner: string;
 }
 
 interface PostPageProps {
@@ -26,18 +29,21 @@ const PostPage = ({ post }: PostPageProps) => {
   return (
     <main className="bg-white flex min-h-screen flex-col items-center justify-between p-0 font-sans">
       <Nav />
-      <div className="mt-16">
-        <h1 className="mt-20">{post.title}</h1>
-        <div className="text-black">{post.summary}</div>
+      <div className=" mt-16">
+        <h1 className="text-2xl font-bold mt-20 text-center">{post.title}</h1>
+        <div className="text-black text-center">{post.summary}</div>
         {post.image && (
           <Image
             src={post.image} 
             alt={post.title}
-            width={500} 
-            height={400} 
-            className="mt-4" 
+            width={800} 
+            height={800} 
+            className="align-middle mt-4" 
           />
         )}
+        <h2 className="text-black">{post.likes}</h2>
+        <h2 className="text-black">{post.owner}</h2>
+        <p className="text-black text-center">{post.content}</p>
       </div>
       <Footer />
     </main>
@@ -62,7 +68,10 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const query = `*[_type == "post" && _id == $id][0]{
     _id, 
     title, 
-    summary, 
+    summary,
+    likes, 
+    content,
+    owner,
     "image": image.asset->url // Corrigido para 'url'
   }`;
   
