@@ -117,6 +117,11 @@ export const schema: { types: SchemaTypeDefinition[] } = {
           title: 'Previous',
           type: 'text',
         }),
+        defineField({
+          name: 'url',
+          title: 'URL',
+          type: 'url',
+        }),
       ],
     }),
   ],
