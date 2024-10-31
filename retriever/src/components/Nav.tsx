@@ -9,7 +9,7 @@ const Nav = () => {
     };
 
     return (
-        <nav className="bg-purple-600 top-0 left-0 w-full z-10 fixed py-5 shadow-2xl">
+        <nav className="bg-[#a538ff] top-0 left-0 w-full z-10 fixed py-5 shadow-2xl">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16">
                     <div className="flex items-center">
@@ -23,7 +23,7 @@ const Nav = () => {
                             <Link href="/explorer" className="text-white text-sm font-semibold capitalize hover:text-purple-900">Explorar</Link>
                             <Link href="/types" className="text-white text-sm font-semibold capitalize hover:text-purple-900">Tipos</Link>
                             <Link href="/reports" className="text-white text-sm font-semibold capitalize hover:text-purple-900">Relatos</Link>
-                            <Link href="/about" className="text-white text-sm font-semibold capitalize hover:text-purple-900">About</Link>
+                            <Link href="/about" className="text-white text-sm font-semibold capitalize hover:text-purple-900">Sobre Nos</Link>
                         </div>
                     </div>
                     <div className="-mr-2 flex md:hidden">

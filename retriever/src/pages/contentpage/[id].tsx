@@ -37,7 +37,8 @@ const PostPage = ({ post }: PostPageProps) => {
       const updatedPost = await client.patch(post._id)
         .set({ likes: updatedLikes })
         .commit();
-
+      
+      console.log('Post atualizado:', updatedPost); 
       setLikes(updatedPost.likes); 
     } catch (error) {
       console.error('Erro ao atualizar likes:', error);
@@ -59,11 +60,15 @@ const PostPage = ({ post }: PostPageProps) => {
     }
   };
 
+  if (!post || !post.title || !post.summary) {
+    return <div>Post não encontrado.</div>;
+  }
+
   return (
     <main className="bg-white flex min-h-screen flex-col items-center justify-between p-0 font-sans">
       <Nav />
       <div className="mt-16">
-        <h1 className="text-2xl font-bold mt-20 text-center">{post.title}</h1>
+        <h1 className="text-4xl font-bold mt-20 text-center">{post.title}</h1>
         <div className="text-black text-center">{post.summary}</div>
         {post.image && (
           <Image
@@ -71,7 +76,7 @@ const PostPage = ({ post }: PostPageProps) => {
             alt={post.title}
             width={800} 
             height={800} 
-            className="align-middle mt-4" 
+            className="align-middle mt-4 mx-auto" 
           />
         )}
         <h2 className="text-black">{likes} Likes</h2> 
@@ -96,7 +101,7 @@ const PostPage = ({ post }: PostPageProps) => {
                 />
                 <button
                   type="submit"
-                  className="bg-blue-500 text-black p-2 rounded-md"
+                  className="bg-purple-600 text-black p-2 rounded-md"
                 >
                   Enviar
                 </button>
@@ -143,6 +148,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   }`;
   
   const post = await client.fetch(query, { id: params?.id });
+  console.log(post); 
 
   if (!post) {
     return {

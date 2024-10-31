@@ -45,28 +45,44 @@ const AnxietyAbout = () => {
                     </div>
                 </section>
                 <section className="mt-6 bg-white flex flex-col items-center">
-                    <p className="text-black text-center">
-                        Developers today do more than just write and ship code—they’re expected to navigate a number of
-                        tools, environments, and technologies, including the new frontier of generative artificial
-                        intelligence (AI) coding tools. But the most important thing for developers isn’t story points
-                        or the speed of deployments. It’s the developer experience, which determines how efficiently and
-                        productively developers can exceed standards, enter a flow state, and drive impact.
-                    </p>
-                    <p className="text-black mt-4 text-center">
-                        I say this not only as GitHub’s chief product officer, but as a long-time developer who has
-                        worked across every part of the stack. Decades ago, when I earned my master’s in mechanical
-                        engineering, I became one of the first technologists to apply AI in the lab. Back then, it would
-                        take our models five days to process our larger datasets—which is striking considering the speed
-                        of today’s AI models. I yearned for tools that would make me more efficient and shorten my time
-                        to production. This is why I’m passionate about developer experience (DevEx) and have made it my
-                        focus as GitHub’s chief product officer.
-                    </p>
-                    <p className="text-black mt-4 text-center">
-                        Amid the rapid advancements in generative AI, we wanted to get a better understanding from
-                        developers about how new tools—and current workflows—are impacting the overall developer
-                        experience. As a starting point, we focused on some of the biggest components of the developer
-                        experience: developer productivity, team collaboration, AI, and how developers think they can
-                        best drive impact in enterprise environments.
+                    <p className="text-black mr-4 ml-2">
+                    A ansiedade é uma emoção complexa e multifacetada que todos experimentamos em algum momento de nossas vidas. Ela se manifesta como uma resposta natural do corpo a situações de estresse ou perigo, ajudando a preparar-nos para enfrentar desafios. No entanto, quando a ansiedade se torna intensa, persistente e interfere nas atividades diárias, pode ser classificada como um transtorno de ansiedade.
+
+O Que é Ansiedade?
+A ansiedade é uma resposta emocional que envolve sentimentos de preocupação, nervosismo e medo. Esse estado pode ser desencadeado por situações específicas, como exames, entrevistas de emprego ou eventos sociais, mas também pode surgir sem uma causa aparente. O corpo reage à ansiedade ativando o sistema nervoso simpático, o que resulta em sintomas físicos como aceleração do coração, sudorese, tensão muscular e sensação de falta de ar.
+
+Tipos de Transtornos de Ansiedade
+Existem vários tipos de transtornos de ansiedade, cada um com características específicas:
+
+Transtorno de Ansiedade Generalizada (TAG): Caracteriza-se por uma preocupação excessiva e incontrolável sobre diversas questões, como saúde, trabalho, família e questões financeiras. As pessoas com TAG muitas vezes se sentem ansiosas na maioria dos dias, mesmo que não haja motivos evidentes para tal preocupação.
+
+Transtorno de Pânico: Envolve episódios súbitos e intensos de medo, conhecidos como ataques de pânico. Esses episódios podem incluir sintomas físicos como palpitações, sudorese, tremores e sensação de desmaio. As pessoas que sofrem desse transtorno podem desenvolver o medo de ter novos ataques, levando a uma evitação de situações que possam desencadeá-los.
+
+Fobias: Refere-se a medos intensos e irracionais de objetos ou situações específicas, como altura, aranhas ou voar. Esses medos são desproporcionais em relação ao perigo real que a situação representa e podem levar a comportamentos de evitação.
+
+Transtorno de Ansiedade Social: Também conhecido como fobia social, é caracterizado pelo medo intenso de ser julgado ou envergonhado em situações sociais. As pessoas com esse transtorno podem evitar interações sociais e se sentir extremamente ansiosas antes de eventos sociais.
+
+Transtorno Obsessivo-Compulsivo (TOC): Envolve pensamentos intrusivos e recorrentes (obsessões) que causam ansiedade, levando a comportamentos repetitivos (compulsões) que a pessoa sente que precisa realizar para aliviar essa ansiedade.
+
+Sintomas da Ansiedade
+Os sintomas da ansiedade podem variar de pessoa para pessoa, mas geralmente incluem:
+
+Sintomas Emocionais: Preocupação excessiva, irritabilidade, dificuldade de concentração e sensação de que algo ruim está prestes a acontecer.
+Sintomas Físicos: Taquicardia, sudorese, tremores, tensão muscular, náuseas e problemas de sono.
+Sintomas Comportamentais: Evitação de situações que causam ansiedade, isolamento social e mudanças nos padrões de comportamento.
+Causas da Ansiedade
+As causas da ansiedade são complexas e podem envolver uma combinação de fatores genéticos, biológicos, ambientais e psicológicos. Eventos traumáticos, estresse crônico e predisposições familiares podem contribuir para o desenvolvimento de transtornos de ansiedade.
+
+Tratamento da Ansiedade
+O tratamento da ansiedade pode incluir uma variedade de abordagens, dependendo da gravidade e do tipo do transtorno. Algumas opções incluem:
+
+Terapia Psicológica: Terapias como a terapia cognitivo-comportamental (TCC) são eficazes no tratamento da ansiedade, ajudando os indivíduos a identificar e mudar padrões de pensamento disfuncionais.
+
+Medicação: Antidepressivos e ansiolíticos podem ser prescritos para ajudar a controlar os sintomas de ansiedade.
+
+Técnicas de Relaxamento: Práticas como meditação, ioga e exercícios de respiração podem ajudar a reduzir a ansiedade.
+
+Mudanças no Estilo de Vida: Atividades físicas regulares, uma dieta equilibrada e um sono adequado podem contribuir para a redução da ansiedade.
                     </p>
                 </section>
 

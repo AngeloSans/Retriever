@@ -19,7 +19,7 @@ const Types = () => {
                 <title>Tipos de Ansiedade</title>
             </Head>
 
-            <header className="bg-purple-600 p-4 text-white">
+            <header className="bg-black p-4 text-white">
                 <div className="container mx-auto">
                     <h1 className="text-3xl font-bold">Ansiedade</h1>
                     <Nav />

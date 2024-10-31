@@ -4,11 +4,13 @@ import Footer from '../components/Footer';
 import React, { useState } from 'react';
 import { client } from '../../sanity/lib/sanity';
 import '../app/globals.css';
+import Link from 'next/link'; 
 
 interface SearchResult {
   title: string;
   author: string;
   previous: string;
+  url: string; 
 }
 
 export default function RetrieverAcademic() {
@@ -23,9 +25,10 @@ export default function RetrieverAcademic() {
         `*[_type == "retrieverAcademic" && title match $searchQuery]{
           title,
           author,
-          previous
+          previous,
+          url
         }`,
-        { searchQuery: `${query}*` } 
+        { searchQuery: `${query}*` }
       );
 
       setResults(searchResults);
@@ -63,11 +66,11 @@ export default function RetrieverAcademic() {
         <div className="results mt-4 w-full max-w-3xl mx-auto">
           {results.length > 0 ? (
             results.map((result, index) => (
-              <div key={index} className="result p-2 border-b border-gray-200">
-                <h2 className="text-xl font-semibold">{result.title}</h2>
-                <p className="text-gray-600">{result.author}</p>
-                <p className="text-gray-600">{result.previous}</p>
-              </div>
+              <a key={index} href={result.url} target="_blank" rel="noopener noreferrer" className="result p-2 border-b border-gray-200 block">
+                <h2 className="text-[#743F9E] text-xl font-semibold">{result.title}</h2>
+                <p className="text-[#179703]">{result.author}</p>
+                <p className="text-[#000000]">{result.previous}</p>
+              </a>
             ))
           ) : (
             <p className="text-gray-500">Nenhum resultado encontrado</p>
