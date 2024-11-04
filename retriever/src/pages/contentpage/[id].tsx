@@ -68,7 +68,7 @@ const PostPage = ({ post }: PostPageProps) => {
     <main className="bg-white flex min-h-screen flex-col items-center justify-between p-0 font-sans">
       <Nav />
       <div className="mt-16">
-        <h1 className="text-4xl font-bold mt-20 text-center">{post.title}</h1>
+        <h1 className="text-4xl text-black font-bold mt-20 text-center">{post.title}</h1>
         <div className="text-black text-center">{post.summary}</div>
         {post.image && (
           <Image
@@ -79,6 +79,7 @@ const PostPage = ({ post }: PostPageProps) => {
             className="align-middle mt-4 mx-auto" 
           />
         )}
+        <h2 className="text-black">{post.summary}</h2>
         <h2 className="text-black">{likes} Likes</h2> 
         <h2 className="text-black">{post.owner}</h2>
         <p className="text-black text-center">{post.content}</p>
@@ -143,6 +144,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     summary,
     likes, 
     content,
+    type,
+    summary,
     owner,
     "image": image.asset->url 
   }`;

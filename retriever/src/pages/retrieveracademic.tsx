@@ -48,27 +48,28 @@ export default function RetrieverAcademic() {
         </div>
         <h1 className="text-4xl mt-20 font-bold">Retriever Acadêmico</h1>
         <p className="text-black">Pesquise o seu material acadêmico sobre ansiedade</p>
-        <div className="search-container flex mt-1 w-full max-w-3xl mx-auto">
+        <div className="flex items-center w-full max-w-3xl mx-auto mt-4">
           <input
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Digite aqui"
-            className="flex-grow p-2 text-black rounded-l-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+            placeholder="Digite sua pesquisa"
+            className="flex-grow p-5 text-black rounded-l-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent h-12" 
           />
           <button
             onClick={handleSearch}
-            className="flex-shrink-0 px-6 py-2 bg-purple-600 text-white rounded-r-full hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2"
+            className="flex-grow-0 flex-shrink-0 w-auto px-6 py-2 bg-purple-600 text-white rounded-r-full hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2 h-12" 
           >
-            Search
+            Pesquisar
           </button>
         </div>
-        <div className="results mt-4 w-full max-w-3xl mx-auto">
+
+        <div className="results mt-1 w-full max-w-3xl mx-auto">
           {results.length > 0 ? (
             results.map((result, index) => (
               <a key={index} href={result.url} target="_blank" rel="noopener noreferrer" className="result p-2 border-b border-gray-200 block">
-                <h2 className="text-[#743F9E] text-xl font-semibold">{result.title}</h2>
-                <p className="text-[#179703]">{result.author}</p>
+                <h2 className="text-[#743F9E] text-xl font-semibold border-b-2 border-[#743F9E] pb-2">{result.title}</h2>
+                <p className="text-[#179703] border-b border-gray-300 pb-1">{result.author}</p>
                 <p className="text-[#000000]">{result.previous}</p>
               </a>
             ))
