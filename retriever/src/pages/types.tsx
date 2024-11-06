@@ -50,7 +50,7 @@ const Types = () => {
 
                 <section className="grid grid-cols-1 gap-4">
                     {selectedType === 'Social' && (
-                        <article className="bg-white rounded-lg shadow-md overflow-hidden max-w-md mx-auto">
+                        <article className=" overflow-hidden max-w-md mx-auto">
                             <Image src="/ImagesRetriever/ansiedadesocialtypes.jpg"
                                  alt="Transtorno de Ansiedade Social"
                                  width={500}
@@ -59,10 +59,11 @@ const Types = () => {
                             <div className="px-4">
                                 <h3 className="text-xl font-semibold text-black mb-2">Transtorno de Ansiedade Social: o que é, sintomas e tratamento</h3>
                                 <p className="text-gray-700">
-                                    Os humanos são animais sociais e sua capacidade de se relacionarem confortavelmente em situações sociais afeta muitos aspectos importantes de suas vidas...
-                                    sjdadoasdsapdjaspdosajdoaspjdopasjdosapdjpoasdjpasodjsopdjasopdjasopdjasopdjsaopdjasopdjsaopjdopasjdpasojdpoasjdop
-                                    Os humanos são animais sociais e sua capacidade de se relacionarem confortavelmente em situações sociais afeta muitos aspectos importantes de suas vidas...
-                                    sjdadoasdsapdjaspdosajdoaspjdopasjdosapdjpoasdjpasodjsopdjasopdjasopdjasopdjsaopdjasopdj
+                                O Transtorno de Ansiedade Social (TAS), também conhecido como fobia social, é uma condição mental caracterizada pelo medo intenso e persistente de situações sociais. Pessoas com TAS têm um medo excessivo de serem julgadas, humilhadas ou rejeitadas em contextos sociais ou de desempenho. Esse medo vai além da timidez e afeta significativamente a vida pessoal, profissional e acadêmica.
+
+Cartão Didático: Transtorno de Ansiedade Social (TAS)
+O que é?
+O Transtorno de Ansiedade Social (TAS), também conhecido como fobia social, é uma condição mental caracterizada pelo medo intenso e persistente de situações sociais. Pessoas com TAS têm um medo excessivo de serem julgadas, humilhadas ou rejeitadas em contextos sociais ou de desempenho. Esse medo vai além da timidez e afeta significativamente a vida pessoal, profissional e acadêmica.
                                 </p>
                             </div>
                         </article>
