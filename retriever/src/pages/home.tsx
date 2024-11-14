@@ -116,7 +116,7 @@ const Home: React.FC = () => {
                     </Link>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <Link href="/suport" data-aos={isFirstLoad ? "fade-up" : ""}>
+                    <Link href="/explorer" data-aos={isFirstLoad ? "fade-up" : ""}>
                         <div className="bg-white rounded-lg shadow-md overflow-hidden">
                             <Image
                                 src="/ImagesRetriever/homemdascavernas.jpg"
@@ -137,7 +137,7 @@ const Home: React.FC = () => {
                             </div>
                         </div>
                     </Link>
-                    <Link href="" data-aos={isFirstLoad ? "fade-up" : ""} data-aos-delay="200">
+                    <Link href="/explorer" data-aos={isFirstLoad ? "fade-up" : ""} data-aos-delay="200">
                         <div className="bg-white rounded-lg shadow-md overflow-hidden">
                             <Image
                                 src="/ImagesRetriever/anxietyciency.jpg"
@@ -158,7 +158,7 @@ const Home: React.FC = () => {
                             </div>
                         </div>
                     </Link>
-                    <Link href="/suport" data-aos={isFirstLoad ? "fade-up" : ""} data-aos-delay="400">
+                    <Link href="/explorer" data-aos={isFirstLoad ? "fade-up" : ""} data-aos-delay="400">
                         <div className="bg-white rounded-lg shadow-md overflow-hidden">
                             <Image
                                 src="/ImagesRetriever/anxiouwoman.jpg"
@@ -227,7 +227,7 @@ const Home: React.FC = () => {
                     </Link>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <Link href="" data-aos={isFirstLoad ? "fade-up" : ""}>
+                    <Link href="/explorer" data-aos={isFirstLoad ? "fade-up" : ""}>
                         <div className="bg-white rounded-lg shadow-md overflow-hidden">
                             <Image
                                 src="/ImagesRetriever/baixaautoestima1.png"
@@ -248,7 +248,7 @@ const Home: React.FC = () => {
                             </div>
                         </div>
                     </Link>
-                    <Link href="" data-aos={isFirstLoad ? "fade-up" : ""} data-aos-delay="200">
+                    <Link href="/explorer" data-aos={isFirstLoad ? "fade-up" : ""} data-aos-delay="200">
                         <div className="bg-white rounded-lg shadow-md overflow-hidden">
                             <Image
                                 src="/ImagesRetriever/baixaautoestima2.jpeg"
@@ -269,7 +269,7 @@ const Home: React.FC = () => {
                             </div>
                         </div>
                     </Link>
-                    <Link href="" data-aos={isFirstLoad ? "fade-up" : ""} data-aos-delay="400">
+                    <Link href="/explorer" data-aos={isFirstLoad ? "fade-up" : ""} data-aos-delay="400">
                         <div className="bg-white rounded-lg shadow-md overflow-hidden">
                             <Image
                                 src="/ImagesRetriever/baixaautoestima3.webp"
@@ -301,7 +301,7 @@ const Home: React.FC = () => {
                     </Link>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <Link href="" data-aos={isFirstLoad ? "fade-up" : ""}>
+                    <Link href="/explorer" data-aos={isFirstLoad ? "fade-up" : ""}>
                         <div className="bg-white rounded-lg shadow-md overflow-hidden">
                             <Image
                                 src="/ImagesRetriever/tecnologia1.jpg"
@@ -321,7 +321,7 @@ const Home: React.FC = () => {
                             </div>
                         </div>
                     </Link>
-                    <Link href="" data-aos={isFirstLoad ? "fade-up" : ""} data-aos-delay="200">
+                    <Link href="/explorer" data-aos={isFirstLoad ? "fade-up" : ""} data-aos-delay="200">
                         <div className="bg-white rounded-lg shadow-md overflow-hidden">
                             <Image
                                 src="/ImagesRetriever/tecnologia2.jpg"
@@ -343,7 +343,7 @@ const Home: React.FC = () => {
                             </div>
                         </div>
                     </Link>
-                    <Link href="" data-aos={isFirstLoad ? "fade-up" : ""} data-aos-delay="400">
+                    <Link href="/explorer" data-aos={isFirstLoad ? "fade-up" : ""} data-aos-delay="400">
                         <div className="bg-white rounded-lg shadow-md overflow-hidden">
                             <Image
                                 src="/ImagesRetriever/tecnologia3.webp"

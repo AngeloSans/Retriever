@@ -39,7 +39,7 @@ const Reports = ({ relatos }: InferGetStaticPropsType<typeof getStaticProps>) =>
                 <Nav/>
             </div>
 
-            <div className="mt-16 text-center w-full px-4 mt-40">
+            <div className="text-center w-full px-4 mt-40">
                 <h2 className="text-3xl font-bold text-purple-900 mb-8">Relatos de Experiências Pessoais</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-2xl mx-auto mb-16"> 
                     {relatos.map((relato) => (
