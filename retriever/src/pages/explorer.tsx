@@ -39,7 +39,7 @@ const Explorer: React.FC<ExplorerProps> = ({ posts }) => {
             <div className="container mx-auto p-4 mt-40 flex">
                 
                 <div className="flex-1 space-y-20">
-                    <h1 className="text-4xl font-bold mb-6">Explorar</h1>
+                <h1 className="text-4xl font-bold mb-6 text-[#9A2AF3]">Explorar</h1>
                     {posts.map((post) => (
                         <TopicCard
                             key={post._id}
@@ -62,22 +62,16 @@ const Explorer: React.FC<ExplorerProps> = ({ posts }) => {
                             Artigos e Referências
                         </div>
                         <ul className="space-y-1 text-gray-400">
-                            <li><Link href="#" className="text-sm hover:underline">Contatos</Link></li>
-                            <li><Link href="/about" className="text-sm hover:underline">Sobre nós</Link></li>
-                            <li><Link href="/suport" className="text-sm hover:underline">Ajuda</Link></li>
+                            <li><Link href="#" className="text-sm hover:underline">Pandemia e Ansiedade</Link></li>
+                            <li><Link href="/about" className="text-sm hover:underline">Jovens de 18 a 25 ansiedade</Link></li>
                         </ul>
                     </div>
 
-                    <div>
+                    <Link href={"/suport"}>
                         <div className="text-black font-semibold">
-                            Sei lá
+                        Precisa de Ajuda ?
                         </div>
-                        <ul className="space-y-1 text-gray-400">
-                            <li><Link href="#" className="text-sm hover:underline">Contatos</Link></li>
-                            <li><Link href="/about" className="text-sm hover:underline">Sobre nós</Link></li>
-                            <li><Link href="/suport" className="text-sm hover:underline">Ajuda</Link></li>
-                        </ul>
-                    </div>
+                    </Link>
                 </div>
             </div>
 

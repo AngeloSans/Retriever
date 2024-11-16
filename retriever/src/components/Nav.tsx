@@ -23,7 +23,7 @@ const Nav = () => {
                             <Link href="/explorer" className="text-white text-sm font-semibold capitalize hover:text-purple-900">Explorar</Link>
                             <Link href="/types" className="text-white text-sm font-semibold capitalize hover:text-purple-900">Tipos</Link>
                             <Link href="/reports" className="text-white text-sm font-semibold capitalize hover:text-purple-900">Relatos</Link>
-                            <Link href="/about" className="text-white text-sm font-semibold capitalize hover:text-purple-900">Sobre Nos</Link>
+                            <Link href="/about" className="text-white text-sm font-semibold capitalize hover:text-purple-900">Sobre Nós</Link>
                         </div>
                     </div>
                     <div className="-mr-2 flex md:hidden">
