@@ -2,12 +2,10 @@ import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import Footer from '../../components/Footer';
 import Nav from '../../components/Nav';
-import   Post  from ".././types";
 import TopicCard from '../../components/TopicCard';
-//import '../app/globals.css';
+import { getFilteredPosts } from "../../../sanity/lib/sanity"; 
 import React from 'react';
 import Link from "next/link";
-import {getAllPosts} from "../../../sanity/lib/sanity";
 
 interface Post {
     _id: string;
@@ -28,7 +26,7 @@ const Ansiedade: React.FC<ExplorerProps> = ({ posts }) => {
     return (
         <main className="bg-white flex min-h-screen flex-col items-center justify-between p-0">
             <Head>
-                <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet"/>
+                <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet" />
                 <title>Ansiedade e Autoestima</title>
             </Head>
 
@@ -37,9 +35,8 @@ const Ansiedade: React.FC<ExplorerProps> = ({ posts }) => {
             </div>
 
             <div className="container mx-auto p-4 mt-40 flex">
-                
                 <div className="flex-1 space-y-20">
-                <h1 className="text-4xl font-bold mb-6 text-[#9A2AF3]">Ansiedade e Autoestima</h1>
+                    <h1 className="text-4xl font-bold mb-6 text-[#9A2AF3]">Ansiedade e Autoestima</h1>
                     {posts.map((post) => (
                         <TopicCard
                             key={post._id}
@@ -55,7 +52,6 @@ const Ansiedade: React.FC<ExplorerProps> = ({ posts }) => {
                     ))}
                 </div>
 
-                
                 <div className="w-1/4 p-4 space-y-6 ml-8">
                     <div>
                         <div className="text-black font-semibold">
@@ -69,7 +65,7 @@ const Ansiedade: React.FC<ExplorerProps> = ({ posts }) => {
 
                     <Link href={"/suport"}>
                         <div className="text-black font-semibold">
-                        Precisa de Ajuda ?
+                            Precisa de Ajuda?
                         </div>
                     </Link>
                 </div>
@@ -80,15 +76,15 @@ const Ansiedade: React.FC<ExplorerProps> = ({ posts }) => {
     );
 };
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
+    const posts = await getFilteredPosts(['Ansiedade e Autoestima']); 
+
     return {
         props: {
-            posts: await getAllPosts(),
+            posts,
         },
         revalidate: 60,
     };
-}
-
-
+};
 
 export default Ansiedade;

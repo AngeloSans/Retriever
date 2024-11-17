@@ -39,6 +39,23 @@ export async function getAllRelatos() {
     }
 }
 
+export const getFilteredPosts = async (types: string[]) => {
+    const query = `
+        *[_type == "post" && type in $types] | order(date desc) {
+            _id,
+            title,
+            summary,
+            date,
+            likes,
+            owner,
+            type,
+            "image": image.asset->url
+            
+        }
+    `;
+    const params = { types };
+    return await client.fetch(query, params);
+};
 
 export async function getAllPosts(): Promise<Post[]> {
     const query = `*[_type == "post"] {
