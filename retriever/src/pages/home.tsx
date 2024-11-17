@@ -222,7 +222,7 @@ const Home: React.FC = () => {
             <section className="w-full p-6" data-aos={isFirstLoad ? "fade-up" : ""}>
                 <div className="flex items-center space-x-4 mb-4">
                     <h1 className="text-black text-lg font-bold">Ansiedade e Autoestima</h1>
-                    <Link href="/explorer" className="text-purple-900 font-bold">
+                    <Link href="/contentpage/ansiedadeautoestima" className="text-purple-900 font-bold">
                         Ver mais
                     </Link>
                 </div>

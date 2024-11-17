@@ -7,7 +7,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 const Types = () => {
-    const [selectedType, setSelectedType] = useState<string | null>('Social');
+    const [selectedType, setSelectedType] = useState<string | null>('Transtorno do Pânico');
 
     const handleTypeClick = (type: string) => {
         setSelectedType(type);
@@ -26,7 +26,7 @@ const Types = () => {
                 </div>
             </header>
 
-            <main className="container mx-auto p-4 mb-16"> 
+            <main className="container mx-auto p-4 mb-16">
                 <section className="mb-8 text-center">
                     <h2 className="text-4xl text-black font-semibold mt-40">Ansiedade Classificada por Tipos</h2>
                     <h2 className="text-xl font-medium mb-4 text-gray-800 mt-6">
@@ -34,7 +34,7 @@ const Types = () => {
                     </h2>
 
                     <div className="flex justify-center gap-4 border-b-2 border-gray-200 mb-6">
-                        {['Social', 'Pânico', 'TOC', 'TDAH'].map((type, index) => (
+                        {['Transtorno do Pânico', 'Agorafobia', 'Fobias Específicas', 'Fobia Social', 'Ansiedade Generalizada'].map((type, index) => (
                             <button
                                 key={index}
                                 className={`px-4 py-2 text-lg rounded-full transition duration-300 font-semibold ease-in-out ${
@@ -49,63 +49,106 @@ const Types = () => {
                 </section>
 
                 <section className="grid grid-cols-1 gap-4">
-                    {selectedType === 'Social' && (
-                        <article className=" overflow-hidden max-w-md mx-auto">
-                            <Image src="/ImagesRetriever/ansiedadesocialtypes.jpg"
-                                 alt="Transtorno de Ansiedade Social"
-                                 width={500}
-                                 height={500}
-                                 className="w-full h-64 object-cover mb-4"/>
+                    {selectedType === 'Transtorno do Pânico' && (
+                        <article className="overflow-hidden max-w-md mx-auto">
+                            <Image 
+                                src="/ImagesRetriever/panicotypes.jpg"
+                                alt="Transtorno do Pânico"
+                                width={500}
+                                height={500}
+                                className="w-full h-64 object-cover mb-4"
+                            />
                             <div className="px-4">
-                                <h3 className="text-xl font-semibold text-black mb-2">Transtorno de Ansiedade Social: o que é, sintomas e tratamento</h3>
-                                <p className="text-gray-700">
-                                O Transtorno de Ansiedade Social (TAS), também conhecido como fobia social, é uma condição mental caracterizada pelo medo intenso e persistente de situações sociais. Pessoas com TAS têm um medo excessivo de serem julgadas, humilhadas ou rejeitadas em contextos sociais ou de desempenho. Esse medo vai além da timidez e afeta significativamente a vida pessoal, profissional e acadêmica.
-
-Cartão Didático: Transtorno de Ansiedade Social (TAS)
-O que é?
-O Transtorno de Ansiedade Social (TAS), também conhecido como fobia social, é uma condição mental caracterizada pelo medo intenso e persistente de situações sociais. Pessoas com TAS têm um medo excessivo de serem julgadas, humilhadas ou rejeitadas em contextos sociais ou de desempenho. Esse medo vai além da timidez e afeta significativamente a vida pessoal, profissional e acadêmica.
-                                </p>
+                                <h3 className="text-xl font-semibold text-black mb-2">Transtorno do Pânico</h3>
+                                <ul className="list-disc pl-5 text-gray-700">
+                                    <li>Caracterizado por crises de medo intensas e súbitas.</li>
+                                    <li>Possíveis causas incluem estresse extremo e predisposição genética.</li>
+                                    <li>Sintomas físicos como taquicardia, tontura e falta de ar.</li>
+                                    <li>Causa sofrimento psíquico significativo.</li>
+                                </ul>
                             </div>
                         </article>
                     )}
-                    {selectedType === 'Pânico' && (
+                    {selectedType === 'Agorafobia' && (
                         <Link href="/about">
                             <article className="bg-white rounded-lg shadow-md overflow-hidden max-w-md mx-auto">
-                                <Image src="/ImagesRetriever/panicotypes.jpg" alt="Ansiedade em Crianças"
-                                     className="w-full h-64 object-cover mb-4"
-                                     width={500}
-                                     height={500}/>
+                                <Image 
+                                    src="/ImagesRetriever/agorafobiatypes.jpg"
+                                    alt="Agorafobia"
+                                    width={500}
+                                    height={500}
+                                    className="w-full h-64 object-cover mb-4"
+                                />
                                 <div className="px-4">
-                                    <h3 className="text-xl font-semibold text-black mb-2">Entenda o que é ansiedade social e como se manifesta nas crianças</h3>
-                                    <p className="text-gray-700">Ansiedade em crianças.</p>
+                                    <h3 className="text-xl font-semibold text-black mb-2">Agorafobia</h3>
+                                    <ul className="list-disc pl-5 text-gray-700">
+                                        <li>Medo intenso de situações onde escapar pode ser difícil.</li>
+                                        <li>Evita locais como transporte público ou multidões.</li>
+                                        <li>Geralmente associado ao transtorno do pânico.</li>
+                                    </ul>
                                 </div>
                             </article>
                         </Link>
                     )}
-                    {selectedType === 'TOC' && (
+                    {selectedType === 'Fobias Específicas' && (
                         <Link href="/about">
                             <article className="bg-white rounded-lg shadow-md overflow-hidden max-w-md mx-auto">
-                                <Image src="/ImagesRetriever/toctypes.jpg" alt="Ansiedade e Fobia Social"
-                                     className="w-full h-64 object-cover mb-4"
-                                     width={500}
-                                     height={500}/>
+                                <Image 
+                                    src="/ImagesRetriever/fobiatypes.jpg"
+                                    alt="Fobias Específicas"
+                                    width={500}
+                                    height={500}
+                                    className="w-full h-64 object-cover mb-4"
+                                />
                                 <div className="px-4">
-                                    <h3 className="text-xl font-semibold text-black mb-2">Fobia social quando o sofrimento pela timidez é tanto que a saída é se esconder</h3>
-                                    <p className="text-gray-700">Ansiedade e fobia social.</p>
+                                    <h3 className="text-xl font-semibold text-black mb-2">Fobias Específicas</h3>
+                                    <ul className="list-disc pl-5 text-gray-700">
+                                        <li>Medo excessivo de objetos ou situações específicas.</li>
+                                        <li>Exemplos incluem medo de altura, animais ou sangue.</li>
+                                        <li>Impacta a qualidade de vida e as atividades diárias.</li>
+                                    </ul>
                                 </div>
                             </article>
                         </Link>
                     )}
-                    {selectedType === 'TDAH' && (
+                    {selectedType === 'Fobia Social' && (
                         <Link href="/about">
                             <article className="bg-white rounded-lg shadow-md overflow-hidden max-w-md mx-auto">
-                                <Image src="/ImagesRetriever/tdahtypes.jpeg" alt="Ansiedade e Fobia Social"
-                                     className="w-full h-64 object-cover mb-4"
-                                     width={500}
-                                     height={500}/>
+                                <Image 
+                                    src="/ImagesRetriever/socialtypes.jpg"
+                                    alt="Fobia Social"
+                                    width={500}
+                                    height={500}
+                                    className="w-full h-64 object-cover mb-4"
+                                />
                                 <div className="px-4">
-                                    <h3 className="text-xl font-semibold text-black mb-2">Fobia social quando o sofrimento pela timidez é tanto que a saída é se esconder</h3>
-                                    <p className="text-gray-700">Ansiedade e fobia social.</p>
+                                    <h3 className="text-xl font-semibold text-black mb-2">Fobia Social</h3>
+                                    <ul className="list-disc pl-5 text-gray-700">
+                                        <li>Medo intenso e persistente de situações sociais.</li>
+                                        <li>Pessoas têm receio de julgamento ou rejeição.</li>
+                                        <li>Afeta a vida pessoal, acadêmica e profissional.</li>
+                                    </ul>
+                                </div>
+                            </article>
+                        </Link>
+                    )}
+                    {selectedType === 'Ansiedade Generalizada' && (
+                        <Link href="/about">
+                            <article className="bg-white rounded-lg shadow-md overflow-hidden max-w-md mx-auto">
+                                <Image 
+                                    src="/ImagesRetriever/generalizedtypes.jpg"
+                                    alt="Ansiedade Generalizada"
+                                    width={500}
+                                    height={500}
+                                    className="w-full h-64 object-cover mb-4"
+                                />
+                                <div className="px-4">
+                                    <h3 className="text-xl font-semibold text-black mb-2">Ansiedade Generalizada</h3>
+                                    <ul className="list-disc pl-5 text-gray-700">
+                                        <li>Preocupação excessiva com diversas áreas da vida.</li>
+                                        <li>Sintomas incluem tensão muscular, fadiga e insônia.</li>
+                                        <li>Pode interferir no funcionamento diário.</li>
+                                    </ul>
                                 </div>
                             </article>
                         </Link>
