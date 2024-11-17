@@ -52,7 +52,7 @@ const Types = () => {
                     {selectedType === 'Transtorno do Pânico' && (
                         <article className="overflow-hidden max-w-md mx-auto">
                             <Image 
-                                src="/ImagesRetriever/panicotypes.jpg"
+                                src="/ImagesRetriever/panico.jpg"
                                 alt="Transtorno do Pânico"
                                 width={500}
                                 height={500}
@@ -70,10 +70,9 @@ const Types = () => {
                         </article>
                     )}
                     {selectedType === 'Agorafobia' && (
-                        <Link href="/about">
-                            <article className="bg-white rounded-lg shadow-md overflow-hidden max-w-md mx-auto">
+                            <article className="overflow-hidden max-w-md mx-auto">
                                 <Image 
-                                    src="/ImagesRetriever/agorafobiatypes.jpg"
+                                    src="/ImagesRetriever/agorafobia.jpg"
                                     alt="Agorafobia"
                                     width={500}
                                     height={500}
@@ -88,13 +87,11 @@ const Types = () => {
                                     </ul>
                                 </div>
                             </article>
-                        </Link>
                     )}
                     {selectedType === 'Fobias Específicas' && (
-                        <Link href="/about">
-                            <article className="bg-white rounded-lg shadow-md overflow-hidden max-w-md mx-auto">
+                            <article className="overflow-hidden max-w-md mx-auto">
                                 <Image 
-                                    src="/ImagesRetriever/fobiatypes.jpg"
+                                    src="/ImagesRetriever/fobiasespecificas.jpg"
                                     alt="Fobias Específicas"
                                     width={500}
                                     height={500}
@@ -109,13 +106,11 @@ const Types = () => {
                                     </ul>
                                 </div>
                             </article>
-                        </Link>
                     )}
                     {selectedType === 'Fobia Social' && (
-                        <Link href="/about">
-                            <article className="bg-white rounded-lg shadow-md overflow-hidden max-w-md mx-auto">
+                            <article className="overflow-hidden max-w-md mx-auto">
                                 <Image 
-                                    src="/ImagesRetriever/socialtypes.jpg"
+                                    src="/ImagesRetriever/fobiasocial.jpg"
                                     alt="Fobia Social"
                                     width={500}
                                     height={500}
@@ -130,13 +125,11 @@ const Types = () => {
                                     </ul>
                                 </div>
                             </article>
-                        </Link>
                     )}
                     {selectedType === 'Ansiedade Generalizada' && (
-                        <Link href="/about">
-                            <article className="bg-white rounded-lg shadow-md overflow-hidden max-w-md mx-auto">
+                            <article className="overflow-hidden max-w-md mx-auto">
                                 <Image 
-                                    src="/ImagesRetriever/generalizedtypes.jpg"
+                                    src="/ImagesRetriever/tag.jpg"
                                     alt="Ansiedade Generalizada"
                                     width={500}
                                     height={500}
@@ -151,7 +144,6 @@ const Types = () => {
                                     </ul>
                                 </div>
                             </article>
-                        </Link>
                     )}
                 </section>
             </main>

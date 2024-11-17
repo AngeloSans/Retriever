@@ -227,7 +227,7 @@ const Home: React.FC = () => {
                     </Link>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <Link href="/explorer" data-aos={isFirstLoad ? "fade-up" : ""}>
+                    <Link href="/contentpage/ansiedadeautoestima" data-aos={isFirstLoad ? "fade-up" : ""}>
                         <div className="bg-white rounded-lg shadow-md overflow-hidden">
                             <Image
                                 src="/ImagesRetriever/baixaautoestima1.png"
@@ -248,7 +248,7 @@ const Home: React.FC = () => {
                             </div>
                         </div>
                     </Link>
-                    <Link href="/explorer" data-aos={isFirstLoad ? "fade-up" : ""} data-aos-delay="200">
+                    <Link href="/contentpage/ansiedadeautoestima" data-aos={isFirstLoad ? "fade-up" : ""} data-aos-delay="200">
                         <div className="bg-white rounded-lg shadow-md overflow-hidden">
                             <Image
                                 src="/ImagesRetriever/baixaautoestima2.jpeg"
@@ -269,7 +269,7 @@ const Home: React.FC = () => {
                             </div>
                         </div>
                     </Link>
-                    <Link href="/explorer" data-aos={isFirstLoad ? "fade-up" : ""} data-aos-delay="400">
+                    <Link href="/contentpage/ansiedadeautoestima" data-aos={isFirstLoad ? "fade-up" : ""} data-aos-delay="400">
                         <div className="bg-white rounded-lg shadow-md overflow-hidden">
                             <Image
                                 src="/ImagesRetriever/baixaautoestima3.webp"
@@ -296,12 +296,12 @@ const Home: React.FC = () => {
             <section className="w-full p-6" data-aos={isFirstLoad ? "fade-up" : ""}>
                 <div className="flex items-center space-x-4 mb-4">
                     <h1 className="text-black text-lg font-bold">Tecnologia e Ansiedade</h1>
-                    <Link href="/explorer" className="text-purple-900 font-bold">
+                    <Link href="/contentpage/tecnologiaansiedade" className="text-purple-900 font-bold">
                         Ver mais
                     </Link>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <Link href="/explorer" data-aos={isFirstLoad ? "fade-up" : ""}>
+                    <Link href="/contentpage/tecnologiaansiedade" data-aos={isFirstLoad ? "fade-up" : ""}>
                         <div className="bg-white rounded-lg shadow-md overflow-hidden">
                             <Image
                                 src="/ImagesRetriever/tecnologia1.jpg"
@@ -321,7 +321,7 @@ const Home: React.FC = () => {
                             </div>
                         </div>
                     </Link>
-                    <Link href="/explorer" data-aos={isFirstLoad ? "fade-up" : ""} data-aos-delay="200">
+                    <Link href="/contentpage/tecnologiaansiedade" data-aos={isFirstLoad ? "fade-up" : ""} data-aos-delay="200">
                         <div className="bg-white rounded-lg shadow-md overflow-hidden">
                             <Image
                                 src="/ImagesRetriever/tecnologia2.jpg"
@@ -343,7 +343,7 @@ const Home: React.FC = () => {
                             </div>
                         </div>
                     </Link>
-                    <Link href="/explorer" data-aos={isFirstLoad ? "fade-up" : ""} data-aos-delay="400">
+                    <Link href="/contentpage/tecnologiaansiedade" data-aos={isFirstLoad ? "fade-up" : ""} data-aos-delay="400">
                         <div className="bg-white rounded-lg shadow-md overflow-hidden">
                             <Image
                                 src="/ImagesRetriever/tecnologia3.webp"
