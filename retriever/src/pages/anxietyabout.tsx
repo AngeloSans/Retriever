@@ -29,20 +29,7 @@ const AnxietyAbout = () => {
                 </section>
                 <section className="mt-6 bg-white flex flex-row items-center space-x-4">
                     <p className="font-extrabold text-black">Angelo Santos</p>
-                    <p className="text-black">Compartilhar</p>
-                    <div className="flex items-center justify-center space-x-4 mt-2">
-                        <div className="bg-purple-950 rounded-full p-2 flex items-center justify-center w-10 h-10">
-                            <Image src="/ImagesRetriever/iconX.png" width={500} height={500} alt="Icon" className="w-full h-full object-contain"/>
-                        </div>
-                        <div className="bg-purple-950 rounded-full p-2 flex items-center justify-center w-10 h-10">
-                            <Image src="/ImagesRetriever/iconFacebook.png" width={500} height={500} alt="Facebook Icon"
-                                 className="w-full h-full object-contain"/>
-                        </div>
-                        <div className="bg-purple-950 rounded-full p-2 flex items-center justify-center w-10 h-10">
-                            <Image src="/ImagesRetriever/iconLinkedin (2).png" width={500} height={500} alt="LinkedIn Icon"
-                                 className="w-full h-full object-contain"/>
-                        </div>
-                    </div>
+                    
                 </section>
                 <section className="mt-6 bg-white flex flex-col items-center">
                     <p className="text-black mr-4 ml-2">

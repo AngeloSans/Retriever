@@ -1,9 +1,10 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
-import { client } from '../../../sanity/lib/sanity'; 
+import { client } from '../../../sanity/lib/sanity';
 import { useRouter } from 'next/router';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
-import Image from "next/image";
+import Image from 'next/image';
+import Link from 'next/link';
 
 interface Post {
   _id: string;
@@ -15,11 +16,19 @@ interface Post {
   owner: string;
 }
 
-interface PostPageProps {
-  post: Post;
+interface RelatedPost {
+  _id: string;
+  title: string;
+  summary: string;
+  image: string;
 }
 
-const PostPage = ({ post }: PostPageProps) => {
+interface PostPageProps {
+  post: Post;
+  relatedPosts: RelatedPost[];
+}
+
+const PostPage = ({ post, relatedPosts }: PostPageProps) => {
   const router = useRouter();
 
   if (router.isFallback) {
@@ -30,7 +39,6 @@ const PostPage = ({ post }: PostPageProps) => {
     return <div>Post não encontrado.</div>;
   }
 
-  // Formata a data para "DD/MM/YYYY"
   const formattedDate = new Date(post.date).toLocaleDateString('pt-BR', {
     day: '2-digit',
     month: '2-digit',
@@ -40,23 +48,56 @@ const PostPage = ({ post }: PostPageProps) => {
   return (
     <main className="bg-white flex min-h-screen flex-col items-center justify-between p-0 font-sans">
       <Nav />
-      <div className="mt-16">
-        <h1 className="text-4xl text-black font-bold mt-20 text-center">{post.title}</h1>
-        <h4 className="text-black">{formattedDate}</h4>
-        <div className="text-black text-center">{post.summary}</div>
+      <div className="mt-16 px-4 max-w-4xl w-full">
+        <h1 className="text-black text-left mt-20">{formattedDate}</h1>
+        <h1 className="text-2xl text-black font-bold mt-6 text-center">{post.title}</h1>
+        
+        
         {post.image && (
           <Image
-            src={post.image} 
+            src={post.image}
             alt={post.title}
-            width={800} 
-            height={800} 
-            className="align-middle mt-4 mx-auto" 
+            width={800}
+            height={800}
+            className="align-middle mt-4 mx-auto"
           />
-        )}
-        <h2 className="text-black">{post.summary}</h2>
-        <h2 className="text-black">{post.owner}</h2>
-        <p className="text-black text-center">{post.content}</p>
+        )
+        }
+        <p className="text-black text-center mt-4 italic">{post.summary}</p>
+        <article className="text-black text-justify mt-6">
+        <footer className="text-black font-bold mt-6 text-left">
+          <p>Por: {post.owner}</p>
+        </footer>  
+          <p className='mt-6'>{post.content}</p>
+        </article>
+        
       </div>
+
+      <section className="w-full p-6 mt-12">
+        <h2 className="text-black text-2xl font-bold mb-6">Posts Relacionados</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {relatedPosts.map((relatedPost) => (
+            <Link
+              key={relatedPost._id}
+              href={`/contentpage/${relatedPost._id}`}
+              className="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-500 hover:scale-105"
+            >
+              <Image
+                src={relatedPost.image}
+                alt={relatedPost.title}
+                className="w-full h-48 object-cover"
+                width={500}
+                height={500}
+              />
+              <div className="p-4">
+                <h2 className="text-black text-md font-semibold">{relatedPost.title}</h2>
+                <p className="text-gray-600 text-sm">{relatedPost.summary}</p>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+
       <Footer />
     </main>
   );
@@ -77,7 +118,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const query = `*[_type == "post" && _id == $id][0]{
+  const postQuery = `*[_type == "post" && _id == $id][0]{
     _id, 
     title, 
     summary,
@@ -86,9 +127,16 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     date,
     "image": image.asset->url 
   }`;
-  
-  const post = await client.fetch(query, { id: params?.id });
-  console.log(post); 
+
+  const relatedPostsQuery = `*[_type == "post" && _id != $id][0...3]{
+    _id,
+    title,
+    summary,
+    "image": image.asset->url
+  }`;
+
+  const post = await client.fetch(postQuery, { id: params?.id });
+  const relatedPosts = await client.fetch(relatedPostsQuery, { id: params?.id });
 
   if (!post) {
     return {
@@ -99,6 +147,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   return {
     props: {
       post,
+      relatedPosts,
     },
     revalidate: 60,
   };
