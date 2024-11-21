@@ -128,12 +128,13 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     "image": image.asset->url 
   }`;
 
-  const relatedPostsQuery = `*[_type == "post" && _id != $id][0...3]{
+  const relatedPostsQuery = `*[_type == "post" && _id != $id] | order(_createdAt desc)[0...3]{
     _id,
     title,
     summary,
     "image": image.asset->url
   }`;
+  
 
   const post = await client.fetch(postQuery, { id: params?.id });
   const relatedPosts = await client.fetch(relatedPostsQuery, { id: params?.id });
